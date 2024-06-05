@@ -1,0 +1,2 @@
+osource "/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/boards/shields/*/Kconfig.shield"
+osource "/opt/nordic/ncs/v2.5.2/nrf/boards/shields/*/Kconfig.shield"
