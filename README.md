@@ -4,7 +4,7 @@
 The project was developed and tested on the `nRF-52840-DK` development kit.
 
 ### Overview
-When connected, the mobile application on the connected device can display the received button state and control the state of **LED 3** on the development kit.
+When connected, the mobile application on the connected device can display the received button state and control the state of **LED3** on the development kit.
 
 ### User Interface
 LED 1:
@@ -15,9 +15,6 @@ LED 2:
 
 LED 3:
    Lit when the development kit is controlled remotely from the connected device.
-
-Button 1:
-   Send a notification with the button state: "pressed" or "released".
 
 ### Testing
 After programming the to your development kit, test it by performing the following steps:
