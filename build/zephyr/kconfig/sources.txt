@@ -1,3 +1,9 @@
+/Users/gimseongbin/Desktop/24-1/SmartHome/Kconfig
+/Users/gimseongbin/Desktop/24-1/SmartHome/VERSION
+/Users/gimseongbin/Desktop/24-1/SmartHome/build/Kconfig/Kconfig.dts
+/Users/gimseongbin/Desktop/24-1/SmartHome/build/Kconfig/Kconfig.modules
+/Users/gimseongbin/Desktop/24-1/SmartHome/build/Kconfig/Kconfig.shield
+/Users/gimseongbin/Desktop/24-1/SmartHome/build/Kconfig/Kconfig.shield.defconfig
 /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/cmake/zephyr/Kconfig
 /opt/nordic/ncs/v2.5.2/modules/debug/TraceRecorder/config/Kconfig
 /opt/nordic/ncs/v2.5.2/modules/debug/TraceRecorder/kernelports/Zephyr/Kconfig
@@ -306,12 +312,6 @@
 /opt/nordic/ncs/v2.5.2/nrfxlib/nrf_rpc/Kconfig
 /opt/nordic/ncs/v2.5.2/nrfxlib/openthread/Kconfig
 /opt/nordic/ncs/v2.5.2/nrfxlib/zboss/Kconfig
-/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/Kconfig
-/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/VERSION
-/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/Kconfig/Kconfig.dts
-/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/Kconfig/Kconfig.modules
-/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/Kconfig/Kconfig.shield
-/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/Kconfig/Kconfig.shield.defconfig
 /opt/nordic/ncs/v2.5.2/zephyr/Kconfig.zephyr
 /opt/nordic/ncs/v2.5.2/zephyr/arch/Kconfig
 /opt/nordic/ncs/v2.5.2/zephyr/arch/arm/Kconfig

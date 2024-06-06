@@ -1,4 +1,4 @@
-# Install script for directory: /opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs
+# Install script for directory: /Users/gimseongbin/Desktop/24-1/SmartHome
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/zephyr/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/gimseongbin/Desktop/24-1/SmartHome/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

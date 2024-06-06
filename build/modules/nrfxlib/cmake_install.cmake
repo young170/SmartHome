@@ -39,11 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/modules/nrfxlib/nrfxlib/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/modules/nrfxlib/nrfxlib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/modules/nrfxlib/nrf_802154/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/modules/nrfxlib/nrf_802154/cmake_install.cmake")
 endif()
 

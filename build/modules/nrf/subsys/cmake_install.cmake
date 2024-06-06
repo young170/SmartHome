@@ -39,36 +39,36 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/modules/nrf/subsys/bluetooth/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/modules/nrf/subsys/bluetooth/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/modules/nrf/subsys/net/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/modules/nrf/subsys/net/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/modules/nrf/subsys/dfu/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/modules/nrf/subsys/dfu/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/modules/nrf/subsys/mpsl/init/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/modules/nrf/subsys/mpsl/init/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/modules/nrf/subsys/mpsl/fem/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/modules/nrf/subsys/mpsl/fem/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/modules/nrf/subsys/shell/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/modules/nrf/subsys/shell/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/modules/nrf/subsys/debug/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/modules/nrf/subsys/debug/cmake_install.cmake")
 endif()
 

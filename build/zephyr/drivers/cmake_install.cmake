@@ -39,71 +39,71 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/zephyr/drivers/disk/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/disk/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/zephyr/drivers/interrupt_controller/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/interrupt_controller/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/zephyr/drivers/misc/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/misc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/zephyr/drivers/pcie/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/pcie/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/zephyr/drivers/usb/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/usb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/zephyr/drivers/usb_c/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/usb_c/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/zephyr/drivers/clock_control/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/clock_control/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/zephyr/drivers/console/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/console/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/zephyr/drivers/entropy/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/entropy/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/zephyr/drivers/flash/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/flash/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/zephyr/drivers/gpio/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/gpio/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/zephyr/drivers/pinctrl/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/pinctrl/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/zephyr/drivers/serial/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/serial/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/build/zephyr/drivers/timer/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/timer/cmake_install.cmake")
 endif()
 
