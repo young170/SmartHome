@@ -10,8 +10,11 @@ project(peripheral_lbs)
 
 # NORDIC SDK APP START
 target_sources(app PRIVATE
-  src/main.c
+  src/buttons.c
+  src/bluetooth.c
+  main.c
 )
 
+target_include_directories(app PRIVATE include)
+
 # NORDIC SDK APP END
-zephyr_library_include_directories(.)
