@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "kscan.h": "c",
+        "led.h": "c"
+    }
+}

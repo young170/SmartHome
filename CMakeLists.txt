@@ -10,8 +10,10 @@ project(peripheral_lbs)
 
 # NORDIC SDK APP START
 target_sources(app PRIVATE
-  src/buttons.c
   src/bluetooth.c
+  src/buttons.c
+  src/led.c
+  src/sensors.c
   main.c
 )
 

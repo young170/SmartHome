@@ -189,6 +189,15 @@
 /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/gpio/CMakeFiles/rebuild_cache.dir
 /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/gpio/CMakeFiles/edit_cache.dir
 /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir
+/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/i2c/CMakeFiles/rebuild_cache.dir
+/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/i2c/CMakeFiles/edit_cache.dir
+/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir
+/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/kscan/CMakeFiles/rebuild_cache.dir
+/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/kscan/CMakeFiles/edit_cache.dir
+/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/kscan/CMakeFiles/drivers__kscan.dir
+/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/led/CMakeFiles/rebuild_cache.dir
+/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/led/CMakeFiles/edit_cache.dir
+/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/led/CMakeFiles/drivers__led.dir
 /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/pinctrl/CMakeFiles/rebuild_cache.dir
 /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/pinctrl/CMakeFiles/edit_cache.dir
 /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir

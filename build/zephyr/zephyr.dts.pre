@@ -1168,4 +1168,34 @@ zephyr_udc0: &usbd {
  status = "okay";
 };
 # 0 "<command-line>" 2
+# 1 "/Users/gimseongbin/Desktop/24-1/SmartHome/nrf52840dk_nrf52840.overlay" 1
+# 13 "/Users/gimseongbin/Desktop/24-1/SmartHome/nrf52840dk_nrf52840.overlay"
+&i2c0 {
+    clock-frequency = <100000>;
+
+    ht16k33_ledmatrix: ht16k33@70 {
+        compatible = "holtek,ht16k33";
+        reg = <0x70>;
+
+        keyscan {
+            compatible = "holtek,ht16k33-keyscan";
+        };
+    };
+};
+# 0 "<command-line>" 2
+# 1 "./nrf52840dk_nrf52840.overlay" 1
+# 13 "./nrf52840dk_nrf52840.overlay"
+&i2c0 {
+    clock-frequency = <100000>;
+
+    ht16k33_ledmatrix: ht16k33@70 {
+        compatible = "holtek,ht16k33";
+        reg = <0x70>;
+
+        keyscan {
+            compatible = "holtek,ht16k33-keyscan";
+        };
+    };
+};
+# 0 "<command-line>" 2
 # 1 "/opt/nordic/ncs/v2.5.2/zephyr/misc/empty_file.c"

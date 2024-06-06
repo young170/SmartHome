@@ -132,6 +132,13 @@
 			pinctrl-0 = < &i2c0_default >;
 			pinctrl-1 = < &i2c0_sleep >;
 			pinctrl-names = "default", "sleep";
+			ht16k33_ledmatrix: ht16k33@70 {
+				compatible = "holtek,ht16k33";
+				reg = < 0x70 >;
+				keyscan {
+					compatible = "holtek,ht16k33-keyscan";
+				};
+			};
 		};
 		spi0: spi@40003000 {
 			compatible = "nordic,nrf-spi";

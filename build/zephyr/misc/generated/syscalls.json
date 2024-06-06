@@ -313,6 +313,142 @@
     ],
     [
         [
+            "int i2c_configure",
+            "const struct device *dev, uint32_t dev_config"
+        ],
+        "i2c.h",
+        true
+    ],
+    [
+        [
+            "int i2c_get_config",
+            "const struct device *dev, uint32_t *dev_config"
+        ],
+        "i2c.h",
+        true
+    ],
+    [
+        [
+            "int i2c_transfer",
+            "const struct device *dev,\n\t\t\t   struct i2c_msg *msgs, uint8_t num_msgs,\n\t\t\t   uint16_t addr"
+        ],
+        "i2c.h",
+        true
+    ],
+    [
+        [
+            "int i2c_recover_bus",
+            "const struct device *dev"
+        ],
+        "i2c.h",
+        true
+    ],
+    [
+        [
+            "int i2c_target_driver_register",
+            "const struct device *dev"
+        ],
+        "i2c.h",
+        true
+    ],
+    [
+        [
+            "int i2c_target_driver_unregister",
+            "const struct device *dev"
+        ],
+        "i2c.h",
+        true
+    ],
+    [
+        [
+            "int kscan_config",
+            "const struct device *dev,\n\t\t\t     kscan_callback_t callback"
+        ],
+        "kscan.h",
+        true
+    ],
+    [
+        [
+            "int kscan_enable_callback",
+            "const struct device *dev"
+        ],
+        "kscan.h",
+        true
+    ],
+    [
+        [
+            "int kscan_disable_callback",
+            "const struct device *dev"
+        ],
+        "kscan.h",
+        true
+    ],
+    [
+        [
+            "int led_blink",
+            "const struct device *dev, uint32_t led,\n\t\t\t    uint32_t delay_on, uint32_t delay_off"
+        ],
+        "led.h",
+        true
+    ],
+    [
+        [
+            "int led_get_info",
+            "const struct device *dev, uint32_t led,\n\t\t\t   const struct led_info **info"
+        ],
+        "led.h",
+        true
+    ],
+    [
+        [
+            "int led_set_brightness",
+            "const struct device *dev, uint32_t led,\n\t\t\t\t     uint8_t value"
+        ],
+        "led.h",
+        true
+    ],
+    [
+        [
+            "int led_write_channels",
+            "const struct device *dev,\n\t\t\t\t uint32_t start_channel,\n\t\t\t\t uint32_t num_channels, const uint8_t *buf"
+        ],
+        "led.h",
+        true
+    ],
+    [
+        [
+            "int led_set_channel",
+            "const struct device *dev,\n\t\t\t      uint32_t channel, uint8_t value"
+        ],
+        "led.h",
+        true
+    ],
+    [
+        [
+            "int led_set_color",
+            "const struct device *dev, uint32_t led,\n\t\t\t    uint8_t num_colors, const uint8_t *color"
+        ],
+        "led.h",
+        true
+    ],
+    [
+        [
+            "int led_on",
+            "const struct device *dev, uint32_t led"
+        ],
+        "led.h",
+        true
+    ],
+    [
+        [
+            "int led_off",
+            "const struct device *dev, uint32_t led"
+        ],
+        "led.h",
+        true
+    ],
+    [
+        [
             "int uart_err_check",
             "const struct device *dev"
         ],
@@ -2201,54 +2337,6 @@
     ],
     [
         [
-            "int i2c_configure",
-            "const struct device *dev, uint32_t dev_config"
-        ],
-        "i2c.h",
-        false
-    ],
-    [
-        [
-            "int i2c_get_config",
-            "const struct device *dev, uint32_t *dev_config"
-        ],
-        "i2c.h",
-        false
-    ],
-    [
-        [
-            "int i2c_transfer",
-            "const struct device *dev,\n\t\t\t   struct i2c_msg *msgs, uint8_t num_msgs,\n\t\t\t   uint16_t addr"
-        ],
-        "i2c.h",
-        false
-    ],
-    [
-        [
-            "int i2c_recover_bus",
-            "const struct device *dev"
-        ],
-        "i2c.h",
-        false
-    ],
-    [
-        [
-            "int i2c_target_driver_register",
-            "const struct device *dev"
-        ],
-        "i2c.h",
-        false
-    ],
-    [
-        [
-            "int i2c_target_driver_unregister",
-            "const struct device *dev"
-        ],
-        "i2c.h",
-        false
-    ],
-    [
-        [
             "int i2s_configure",
             "const struct device *dev, enum i2s_dir dir,\n\t\t\t    const struct i2s_config *cfg"
         ],
@@ -2333,94 +2421,6 @@
             "const struct device *ipmdev"
         ],
         "ipm.h",
-        false
-    ],
-    [
-        [
-            "int kscan_config",
-            "const struct device *dev,\n\t\t\t     kscan_callback_t callback"
-        ],
-        "kscan.h",
-        false
-    ],
-    [
-        [
-            "int kscan_enable_callback",
-            "const struct device *dev"
-        ],
-        "kscan.h",
-        false
-    ],
-    [
-        [
-            "int kscan_disable_callback",
-            "const struct device *dev"
-        ],
-        "kscan.h",
-        false
-    ],
-    [
-        [
-            "int led_blink",
-            "const struct device *dev, uint32_t led,\n\t\t\t    uint32_t delay_on, uint32_t delay_off"
-        ],
-        "led.h",
-        false
-    ],
-    [
-        [
-            "int led_get_info",
-            "const struct device *dev, uint32_t led,\n\t\t\t   const struct led_info **info"
-        ],
-        "led.h",
-        false
-    ],
-    [
-        [
-            "int led_set_brightness",
-            "const struct device *dev, uint32_t led,\n\t\t\t\t     uint8_t value"
-        ],
-        "led.h",
-        false
-    ],
-    [
-        [
-            "int led_write_channels",
-            "const struct device *dev,\n\t\t\t\t uint32_t start_channel,\n\t\t\t\t uint32_t num_channels, const uint8_t *buf"
-        ],
-        "led.h",
-        false
-    ],
-    [
-        [
-            "int led_set_channel",
-            "const struct device *dev,\n\t\t\t      uint32_t channel, uint8_t value"
-        ],
-        "led.h",
-        false
-    ],
-    [
-        [
-            "int led_set_color",
-            "const struct device *dev, uint32_t led,\n\t\t\t    uint8_t num_colors, const uint8_t *color"
-        ],
-        "led.h",
-        false
-    ],
-    [
-        [
-            "int led_on",
-            "const struct device *dev, uint32_t led"
-        ],
-        "led.h",
-        false
-    ],
-    [
-        [
-            "int led_off",
-            "const struct device *dev, uint32_t led"
-        ],
-        "led.h",
         false
     ],
     [

@@ -1,17 +1,20 @@
 {
     "__net_socket": [
-        "modem_socket",
         "net_context",
         "dispatcher_context",
         "spair",
         "net_mgmt_socket",
         "tls_context",
-        "websocket_context"
+        "websocket_context",
+        "modem_socket"
     ],
     "__subsystem": [
         "entropy_driver_api",
         "flash_driver_api",
         "gpio_driver_api",
+        "i2c_driver_api",
+        "kscan_driver_api",
+        "led_driver_api",
         "uart_driver_api",
         "crypto_driver_api",
         "adc_driver_api",
@@ -32,12 +35,9 @@
         "fpga_driver_api",
         "fuel_gauge_driver_api",
         "hwspinlock_driver_api",
-        "i2c_driver_api",
         "i2s_driver_api",
         "i3c_driver_api",
         "ipm_driver_api",
-        "kscan_driver_api",
-        "led_driver_api",
         "mbox_driver_api",
         "mdio_driver_api",
         "mipi_dsi_driver_api",

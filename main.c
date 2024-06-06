@@ -2,6 +2,8 @@
 #include <dk_buttons_and_leds.h>
 #include "buttons.h"
 #include "bluetooth.h"
+#include "sensors.h"
+#include "led.h"
 
 #define RUN_STATUS_LED          DK_LED1
 #define RUN_LED_BLINK_INTERVAL  1000
@@ -41,10 +43,19 @@ int main(void) {
         return 0;
     }
 
+    err = init_led_ht16k33();
+    if (err) {
+        printk("HT16K33 LED init failed\n");
+        return 0;
+    }
+
     setup_bluetooth();
 
     for (;;) {
         dk_set_led(RUN_STATUS_LED, (++blink_status) % 2);
         k_sleep(K_MSEC(RUN_LED_BLINK_INTERVAL));
     }
+
+    // clean up
+    
 }

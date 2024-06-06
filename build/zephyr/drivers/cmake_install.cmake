@@ -94,6 +94,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/i2c/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/kscan/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/led/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/pinctrl/cmake_install.cmake")
 endif()
 

@@ -4,25 +4,25 @@
 
 struct k_work button1_work;
 void button1_work_handler(struct k_work *work) {
-	printk("BTN1\n");
+    display_value_ht16k33(1);
 }
 K_WORK_DEFINE(button1_work, button1_work_handler);
 
 struct k_work button2_work;
 void button2_work_handler(struct k_work *work) {
-	printk("BTN2\n");
+    display_value_ht16k33(2);
 }
 K_WORK_DEFINE(button2_work, button2_work_handler);
 
 struct k_work button3_work;
 void button3_work_handler(struct k_work *work) {
-	printk("BTN3\n");
+	display_value_ht16k33(3);
 }
 K_WORK_DEFINE(button3_work, button3_work_handler);
 
 struct k_work button4_work;
 void button4_work_handler(struct k_work *work) {
-	printk("BTN4\n");
+	display_value_ht16k33(4);
 }
 K_WORK_DEFINE(button4_work, button4_work_handler);
 
@@ -43,11 +43,6 @@ void sensor_update_timer_expiry_cb(struct k_timer *timer_id) {
     }
 }
 K_TIMER_DEFINE(sensor_update_timer, sensor_update_timer_expiry_cb, NULL);
-
-static struct gpio_callback button1_cb_data;
-static struct gpio_callback button2_cb_data;
-static struct gpio_callback button3_cb_data;
-static struct gpio_callback button4_cb_data;
 
 void button1_isr(const struct device *dev, struct gpio_callback *cb, uint32_t pins) {
     k_work_submit(&button1_work);
