@@ -9138,7 +9138,7 @@ tbss            0x000000000002cd80        0x8
                 [!provide]                        PROVIDE (__tls_end = __tbss_end)
                 [!provide]                        PROVIDE (__tls_size = (__tbss_end - __tdata_start))
 
-rodata          0x000000000002cd80     0x6060
+rodata          0x000000000002cd80     0x605c
  *(SORT_BY_ALIGNMENT(.rodata))
  .rodata        0x000000000002cd80       0x14 app/libapp.a(bluetooth.c.obj)
  .rodata        0x000000000002cd94       0x20 app/libapp.a(buttons.c.obj)
@@ -9367,695 +9367,694 @@ rodata          0x000000000002cd80     0x6060
  .rodata.setup_bluetooth.str1.1
                 0x000000000002ed5b      0x126 app/libapp.a(bluetooth.c.obj)
  .rodata.str1.1
-                0x000000000002ee81        0xb app/libapp.a(bluetooth.c.obj)
+                0x000000000002ee81        0xa app/libapp.a(bluetooth.c.obj)
  .rodata.button_changed.str1.1
-                0x000000000002ee8c       0x2d app/libapp.a(buttons.c.obj)
+                0x000000000002ee8b       0x2d app/libapp.a(buttons.c.obj)
  .rodata.configure_gpio_directions.str1.1
-                0x000000000002eeb9       0x75 app/libapp.a(buttons.c.obj)
+                0x000000000002eeb8       0x75 app/libapp.a(buttons.c.obj)
  .rodata.configure_gpio_interrupts.str1.1
-                0x000000000002ef2e       0x36 app/libapp.a(buttons.c.obj)
+                0x000000000002ef2d       0x36 app/libapp.a(buttons.c.obj)
  .rodata.init_buttons.str1.1
-                0x000000000002ef64       0x1f app/libapp.a(buttons.c.obj)
+                0x000000000002ef63       0x1f app/libapp.a(buttons.c.obj)
  .rodata.init_led_ht16k33.str1.1
-                0x000000000002ef83       0x14 app/libapp.a(led.c.obj)
+                0x000000000002ef82       0x14 app/libapp.a(led.c.obj)
  .rodata.display_value_ht16k33.str1.1
-                0x000000000002ef97       0x2c app/libapp.a(led.c.obj)
+                0x000000000002ef96       0x2c app/libapp.a(led.c.obj)
  .rodata.main.str1.1
-                0x000000000002efc3       0x83 app/libapp.a(main.c.obj)
+                0x000000000002efc2       0x83 app/libapp.a(main.c.obj)
  .rodata.crc8_ccitt_small_table
-                0x000000000002f046       0x10 zephyr/libzephyr.a(crc8_sw.c.obj)
+                0x000000000002f045       0x10 zephyr/libzephyr.a(crc8_sw.c.obj)
  .rodata.str1.1
-                0x000000000002f056       0x11 zephyr/libzephyr.a(cbprintf_packaged.c.obj)
+                0x000000000002f055       0x11 zephyr/libzephyr.a(cbprintf_packaged.c.obj)
  .rodata.sys_heap_free.str1.1
-                0x000000000002f067       0x21 zephyr/libzephyr.a(heap.c.obj)
+                0x000000000002f066       0x21 zephyr/libzephyr.a(heap.c.obj)
                                          0x39 (size before relaxing)
  .rodata.process_event.str1.1
-                0x000000000002f088       0x4f zephyr/libzephyr.a(onoff.c.obj)
+                0x000000000002f087       0x4f zephyr/libzephyr.a(onoff.c.obj)
                                          0x67 (size before relaxing)
  .rodata.sys_notify_finalize.str1.1
-                0x000000000002f0d7       0x23 zephyr/libzephyr.a(notify.c.obj)
+                0x000000000002f0d6       0x23 zephyr/libzephyr.a(notify.c.obj)
                                          0x3b (size before relaxing)
  .rodata.sys_reboot.str1.1
-                0x000000000002f0fa       0x29 zephyr/libzephyr.a(reboot.c.obj)
+                0x000000000002f0f9       0x29 zephyr/libzephyr.a(reboot.c.obj)
  .rodata.nvs_clear.str1.1
-                0x000000000002f123       0x19 zephyr/libzephyr.a(nvs.c.obj)
+                0x000000000002f122       0x19 zephyr/libzephyr.a(nvs.c.obj)
  .rodata.nvs_mount.str1.1
-                0x000000000002f13c      0x136 zephyr/libzephyr.a(nvs.c.obj)
+                0x000000000002f13b      0x136 zephyr/libzephyr.a(nvs.c.obj)
  .rodata.str1.1
-                0x000000000002f272        0x7 zephyr/libzephyr.a(nvs.c.obj)
+                0x000000000002f271        0x7 zephyr/libzephyr.a(nvs.c.obj)
  .rodata.z_log_minimal_hexdump_print.str1.1
-                0x000000000002f279       0x14 zephyr/libzephyr.a(log_minimal.c.obj)
+                0x000000000002f278       0x14 zephyr/libzephyr.a(log_minimal.c.obj)
                                          0x18 (size before relaxing)
  .rodata.CSWTCH.4
-                0x000000000002f28d        0x4 zephyr/libzephyr.a(log_minimal.c.obj)
+                0x000000000002f28c        0x4 zephyr/libzephyr.a(log_minimal.c.obj)
  .rodata.settings_register.str1.1
-                0x000000000002f291       0x32 zephyr/libzephyr.a(settings.c.obj)
+                0x000000000002f290       0x32 zephyr/libzephyr.a(settings.c.obj)
                                          0x4a (size before relaxing)
  .rodata.settings_call_set_handler.str1.1
-                0x000000000002f2c3       0x2a zephyr/libzephyr.a(settings.c.obj)
+                0x000000000002f2c2       0x2a zephyr/libzephyr.a(settings.c.obj)
  .rodata.str1.1
-                0x000000000002f2ed       0x2a zephyr/libzephyr.a(settings.c.obj)
+                0x000000000002f2ec       0x2a zephyr/libzephyr.a(settings.c.obj)
                                           0x9 (size before relaxing)
  .rodata.str1.1
-                0x000000000002f2ed        0x7 zephyr/libzephyr.a(lbs.c.obj)
- .rodata.sbox   0x000000000002f2f4      0x100 zephyr/libzephyr.a(aes_encrypt.c.obj)
+                0x000000000002f2ec        0x7 zephyr/libzephyr.a(lbs.c.obj)
+ .rodata.sbox   0x000000000002f2f3      0x100 zephyr/libzephyr.a(aes_encrypt.c.obj)
  .rodata.mutex_free_platform.str1.1
-                0x000000000002f3f4       0x26 zephyr/libzephyr.a(nrf_cc3xx_platform_mutex_zephyr.c.obj)
+                0x000000000002f3f3       0x26 zephyr/libzephyr.a(nrf_cc3xx_platform_mutex_zephyr.c.obj)
  .rodata.mutex_init_platform.str1.1
-                0x000000000002f41a       0x2d zephyr/libzephyr.a(nrf_cc3xx_platform_mutex_zephyr.c.obj)
+                0x000000000002f419       0x2d zephyr/libzephyr.a(nrf_cc3xx_platform_mutex_zephyr.c.obj)
  .rodata.z_arm_fatal_error.str1.1
-                0x000000000002f447       0xaf zephyr/arch/arch/arm/core/aarch32/libarch__arm__core__aarch32.a(fatal.c.obj)
+                0x000000000002f446       0xaf zephyr/arch/arch/arm/core/aarch32/libarch__arm__core__aarch32.a(fatal.c.obj)
  .rodata.z_arm_irq_priority_set.str1.1
-                0x000000000002f4f6       0x36 zephyr/arch/arch/arm/core/aarch32/libarch__arm__core__aarch32.a(irq_manage.c.obj)
+                0x000000000002f4f5       0x36 zephyr/arch/arch/arm/core/aarch32/libarch__arm__core__aarch32.a(irq_manage.c.obj)
                                          0x4e (size before relaxing)
  .rodata.mem_manage_fault.str1.1
-                0x000000000002f52c      0x135 zephyr/arch/arch/arm/core/aarch32/cortex_m/libarch__arm__core__aarch32__cortex_m.a(fault.c.obj)
+                0x000000000002f52b      0x135 zephyr/arch/arch/arm/core/aarch32/cortex_m/libarch__arm__core__aarch32__cortex_m.a(fault.c.obj)
                                         0x14d (size before relaxing)
  .rodata.usage_fault.constprop.0.str1.1
-                0x000000000002f661       0xf0 zephyr/arch/arch/arm/core/aarch32/cortex_m/libarch__arm__core__aarch32__cortex_m.a(fault.c.obj)
+                0x000000000002f660       0xf0 zephyr/arch/arch/arm/core/aarch32/cortex_m/libarch__arm__core__aarch32__cortex_m.a(fault.c.obj)
  .rodata.bus_fault.constprop.0.str1.1
-                0x000000000002f751       0xa6 zephyr/arch/arch/arm/core/aarch32/cortex_m/libarch__arm__core__aarch32__cortex_m.a(fault.c.obj)
+                0x000000000002f750       0xa6 zephyr/arch/arch/arm/core/aarch32/cortex_m/libarch__arm__core__aarch32__cortex_m.a(fault.c.obj)
  .rodata.z_arm_fault.str1.1
-                0x000000000002f7f7      0x139 zephyr/arch/arch/arm/core/aarch32/cortex_m/libarch__arm__core__aarch32__cortex_m.a(fault.c.obj)
+                0x000000000002f7f6      0x139 zephyr/arch/arch/arm/core/aarch32/cortex_m/libarch__arm__core__aarch32__cortex_m.a(fault.c.obj)
  .rodata.str1.1
-                0x000000000002f930        0x4 zephyr/arch/arch/arm/core/aarch32/mpu/libarch__arm__core__aarch32__mpu.a(arm_core_mpu.c.obj)
+                0x000000000002f92f        0x4 zephyr/arch/arch/arm/core/aarch32/mpu/libarch__arm__core__aarch32__mpu.a(arm_core_mpu.c.obj)
  .rodata.mpu_configure_regions.str1.1
-                0x000000000002f934       0x53 zephyr/arch/arch/arm/core/aarch32/mpu/libarch__arm__core__aarch32__mpu.a(arm_mpu.c.obj)
+                0x000000000002f933       0x53 zephyr/arch/arch/arm/core/aarch32/mpu/libarch__arm__core__aarch32__mpu.a(arm_mpu.c.obj)
  .rodata.arm_core_mpu_configure_static_mpu_regions.str1.1
-                0x000000000002f987       0x37 zephyr/arch/arch/arm/core/aarch32/mpu/libarch__arm__core__aarch32__mpu.a(arm_mpu.c.obj)
+                0x000000000002f986       0x37 zephyr/arch/arch/arm/core/aarch32/mpu/libarch__arm__core__aarch32__mpu.a(arm_mpu.c.obj)
                                          0x4f (size before relaxing)
  .rodata.__chk_fail.str1.1
-                0x000000000002f9be       0x1e zephyr/lib/libc/picolibc/liblib__libc__picolibc.a(libc-hooks.c.obj)
+                0x000000000002f9bd       0x1e zephyr/lib/libc/picolibc/liblib__libc__picolibc.a(libc-hooks.c.obj)
  .rodata.str1.1
-                0x000000000002f9dc        0xf zephyr/soc/soc/arm/common/cortex_m/libsoc__arm__common__cortex_m.a(arm_mpu_regions.c.obj)
+                0x000000000002f9db        0xf zephyr/soc/soc/arm/common/cortex_m/libsoc__arm__common__cortex_m.a(arm_mpu_regions.c.obj)
  .rodata.CSWTCH.5
-                0x000000000002f9eb        0x6 zephyr/soc/soc/arm/nordic_nrf/nrf52/libsoc__arm__nordic_nrf__nrf52.a(soc.c.obj)
+                0x000000000002f9ea        0x6 zephyr/soc/soc/arm/nordic_nrf/nrf52/libsoc__arm__nordic_nrf__nrf52.a(soc.c.obj)
  .rodata.str1.1
-                0x000000000002f9f1        0x4 zephyr/soc/soc/arm/nordic_nrf/nrf52/libsoc__arm__nordic_nrf__nrf52.a(soc.c.obj)
+                0x000000000002f9f0        0x4 zephyr/soc/soc/arm/nordic_nrf/nrf52/libsoc__arm__nordic_nrf__nrf52.a(soc.c.obj)
  .rodata.bt_addr_le_none
-                0x000000000002f9f5        0x7 zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a(addr.c.obj)
-                0x000000000002f9f5                bt_addr_le_none
+                0x000000000002f9f4        0x7 zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a(addr.c.obj)
+                0x000000000002f9f4                bt_addr_le_none
  .rodata.bt_addr_le_any
-                0x000000000002f9fc        0x7 zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a(addr.c.obj)
-                0x000000000002f9fc                bt_addr_le_any
+                0x000000000002f9fb        0x7 zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a(addr.c.obj)
+                0x000000000002f9fb                bt_addr_le_any
  .rodata.bt_addr_none
-                0x000000000002fa03        0x6 zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a(addr.c.obj)
-                0x000000000002fa03                bt_addr_none
+                0x000000000002fa02        0x6 zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a(addr.c.obj)
+                0x000000000002fa02                bt_addr_none
  .rodata.bt_addr_any
-                0x000000000002fa09        0x6 zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a(addr.c.obj)
-                0x000000000002fa09                bt_addr_any
+                0x000000000002fa08        0x6 zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a(addr.c.obj)
+                0x000000000002fa08                bt_addr_any
  .rodata.bt_addr_le_str.str1.1
-                0x000000000002fa0f       0x4c zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a(bt_str.c.obj)
- .rodata.hex.4  0x000000000002fa5b       0x11 zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a(bt_str.c.obj)
+                0x000000000002fa0e       0x4c zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a(bt_str.c.obj)
+ .rodata.hex.4  0x000000000002fa5a       0x11 zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a(bt_str.c.obj)
  .rodata.str1.1
-                0x000000000002fa6c        0x7 zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a(rpa.c.obj)
+                0x000000000002fa6b        0x7 zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a(rpa.c.obj)
  .rodata.set_setting.str1.1
-                0x000000000002fa73       0x79 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
+                0x000000000002fa72       0x79 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
                                          0x7c (size before relaxing)
  .rodata.bt_settings_encode_key.str1.1
-                0x000000000002faec       0x45 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
+                0x000000000002faeb       0x45 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
  .rodata.bt_settings_init.str1.1
-                0x000000000002fb31       0x2a zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
+                0x000000000002fb30       0x2a zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
  .rodata.bt_settings_store.str1.1
-                0x000000000002fb5b        0x6 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
+                0x000000000002fb5a        0x6 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
  .rodata.do_store_id.str1.1
-                0x000000000002fb61       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
+                0x000000000002fb60       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
  .rodata.bt_settings_store_sc.str1.1
-                0x000000000002fb81       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
+                0x000000000002fb80       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
                                           0x3 (size before relaxing)
  .rodata.bt_settings_store_cf.str1.1
-                0x000000000002fb81       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
+                0x000000000002fb80       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
                                           0x3 (size before relaxing)
  .rodata.bt_settings_store_ccc.str1.1
-                0x000000000002fb81       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
+                0x000000000002fb80       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
                                           0x4 (size before relaxing)
  .rodata.bt_settings_store_hash.str1.1
-                0x000000000002fb81       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
+                0x000000000002fb80       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
                                           0x5 (size before relaxing)
  .rodata.commit_settings.str1.1
-                0x000000000002fb81       0x29 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
+                0x000000000002fb80       0x29 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
  .rodata.bt_settings_store_keys.str1.1
-                0x000000000002fbaa       0x29 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
+                0x000000000002fba9       0x29 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
                                           0x5 (size before relaxing)
  .rodata.str1.1
-                0x000000000002fbaa        0xf zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
+                0x000000000002fba9        0xf zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(settings.c.obj)
  .rodata.long_wq_init.str1.1
-                0x000000000002fbb9        0x9 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(long_wq.c.obj)
+                0x000000000002fbb8        0x9 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(long_wq.c.obj)
  .rodata.uuid128_base
-                0x000000000002fbc2       0x11 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(uuid.c.obj)
+                0x000000000002fbc1       0x11 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(uuid.c.obj)
  .rodata.bt_buf_get_rx.str1.1
-                0x000000000002fbd3       0x2f zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(buf.c.obj)
+                0x000000000002fbd2       0x2f zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(buf.c.obj)
                                          0x47 (size before relaxing)
  .rodata.str1.1
-                0x000000000002fc02        0x8 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(data.c.obj)
+                0x000000000002fc01        0x8 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(data.c.obj)
  .rodata.ver_str.str1.1
-                0x000000000002fc0a        0x8 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000002fc09        0x8 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.hci_data_buf_overflow.str1.1
-                0x000000000002fc12       0x2d zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000002fc11       0x2d zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.hci_disconn_complete.str1.1
-                0x000000000002fc3f       0x2b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000002fc3e       0x2b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.le_phy_update_complete.str1.1
-                0x000000000002fc6a       0x29 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000002fc69       0x29 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.hci_hardware_error.str1.1
-                0x000000000002fc93       0x27 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000002fc92       0x27 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.rx_queue_put.str1.1
-                0x000000000002fcba       0x22 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000002fcb9       0x22 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.handle_event.str1.1
-                0x000000000002fcdc       0x4e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000002fcdb       0x4e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.rx_work_handler.str1.1
-                0x000000000002fd2a       0x9d zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000002fd29       0x9d zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
                                          0xb5 (size before relaxing)
  .rodata.hci_cmd_done.str1.1
-                0x000000000002fdc7       0x72 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000002fdc6       0x72 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.hci_num_completed_packets.str1.1
-                0x000000000002fe39       0x6c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000002fe38       0x6c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.bt_hci_cmd_send_sync.str1.1
-                0x000000000002fea5       0x21 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000002fea4       0x21 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.hci_le_read_max_data_len.str1.1
-                0x000000000002fec6       0x25 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000002fec5       0x25 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.bt_hci_le_enh_conn_complete.str1.1
-                0x000000000002feeb       0xc8 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000002feea       0xc8 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.hci_encrypt_key_refresh_complete.str1.1
-                0x000000000002ffb3       0x2b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000002ffb2       0x2b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.bt_hci_cmd_send.str1.1
-                0x000000000002ffde       0x27 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000002ffdd       0x27 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.le_ltk_request.str1.1
-                0x0000000000030005       0x1c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x0000000000030004       0x1c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.le_conn_param_neg_reply.str1.1
-                0x0000000000030021       0x1f zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x0000000000030020       0x1f zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.hci_tx_thread.str1.1
-                0x0000000000030040       0x46 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000003003f       0x46 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.bt_recv.str1.1
-                0x0000000000030086       0x19 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x0000000000030085       0x19 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.bt_finalize_init.str1.1
-                0x000000000003009f       0x9d zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000003009e       0x9d zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
                                          0x9e (size before relaxing)
  .rodata.bt_init.str1.1
-                0x000000000003013c      0x175 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x000000000003013b      0x175 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.bt_enable.str1.1
-                0x00000000000302b1       0x4b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x00000000000302b0       0x4b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.bt_get_name.str1.1
-                0x00000000000302fc        0xb zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x00000000000302fb        0xa zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.CSWTCH.14006
-                0x00000000000302fc       0x2a zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x00000000000302fb       0x2a zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.str1.1
-                0x0000000000030326       0xf3 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
+                0x0000000000030325       0xf3 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(hci_core.c.obj)
  .rodata.find_rl_conflict.str1.1
-                0x0000000000030419       0x2e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
+                0x0000000000030418       0x2e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
                                          0x46 (size before relaxing)
  .rodata.bt_id_add.str1.1
-                0x0000000000030447       0xf9 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
+                0x0000000000030446       0xf9 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
  .rodata.bt_id_del.str1.1
-                0x0000000000030540       0x5c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
+                0x000000000003053f       0x5c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
  .rodata.bt_id_create.str1.1
-                0x000000000003059c       0x33 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
+                0x000000000003059b       0x33 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
  .rodata.bt_id_read_public_addr.str1.1
-                0x00000000000305cf       0x41 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
+                0x00000000000305ce       0x41 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
  .rodata.bt_read_static_addr.str1.1
-                0x0000000000030610       0x84 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
+                0x000000000003060f       0x84 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
  .rodata.bt_id_set_adv_own_addr.str1.1
-                0x0000000000030694       0x24 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
+                0x0000000000030693       0x24 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
  .rodata.str1.1
-                0x00000000000306b8        0x6 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
+                0x00000000000306b7        0x6 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(id.c.obj)
  .rodata.hci_set_ad.str1.1
-                0x00000000000306be       0x1e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(adv.c.obj)
+                0x00000000000306bd       0x1e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(adv.c.obj)
  .rodata.bt_le_adv_start_legacy.str1.1
-                0x00000000000306dc       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(adv.c.obj)
+                0x00000000000306db       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(adv.c.obj)
  .rodata.adv_timeout.str1.1
-                0x00000000000306fc       0x24 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(adv.c.obj)
+                0x00000000000306fb       0x24 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(adv.c.obj)
  .rodata.bt_le_adv_resume.str1.1
-                0x0000000000030720       0x3b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(adv.c.obj)
+                0x000000000003071f       0x3b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(adv.c.obj)
  .rodata.str1.1
-                0x000000000003075b        0x7 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(adv.c.obj)
+                0x000000000003075a        0x7 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(adv.c.obj)
  .rodata.bt_pub_key_gen.str1.1
-                0x0000000000030762       0x74 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(ecc.c.obj)
+                0x0000000000030761       0x74 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(ecc.c.obj)
  .rodata.bt_dh_key_gen.str1.1
-                0x00000000000307d6       0x27 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(ecc.c.obj)
+                0x00000000000307d5       0x27 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(ecc.c.obj)
  .rodata.debug_public_key
-                0x00000000000307fd       0x40 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(ecc.c.obj)
+                0x00000000000307fc       0x40 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(ecc.c.obj)
  .rodata.str1.1
-                0x000000000003083d        0x7 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(ecc.c.obj)
+                0x000000000003083c        0x7 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(ecc.c.obj)
  .rodata.notify_connected.str1.1
-                0x0000000000030844       0x30 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
+                0x0000000000030843       0x30 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
                                          0x48 (size before relaxing)
  .rodata.send_frag.str1.1
-                0x0000000000030874       0x27 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
+                0x0000000000030873       0x27 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
  .rodata.bt_conn_recv.str1.1
-                0x0000000000030874       0xb4 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
+                0x0000000000030873       0xb4 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
  .rodata.bt_conn_send_cb.str1.1
-                0x0000000000030928       0x69 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
+                0x0000000000030927       0x69 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
  .rodata.bt_conn_set_state.str1.1
-                0x0000000000030991       0x5d zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
+                0x0000000000030990       0x5d zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
  .rodata.bt_conn_lookup_handle.str1.1
-                0x00000000000309ee       0x1c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
+                0x00000000000309ed       0x1c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
  .rodata.bt_conn_create_pdu_timeout.str1.1
-                0x0000000000030a0a       0x2e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
+                0x0000000000030a09       0x2e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
  .rodata.bt_conn_exists_le.str1.1
-                0x0000000000030a38       0x28 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
+                0x0000000000030a37       0x28 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
  .rodata.deferred_work.str1.1
-                0x0000000000030a60       0x59 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
+                0x0000000000030a5f       0x59 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
  .rodata.str1.1
-                0x0000000000030ab9       0x79 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
+                0x0000000000030ab8       0x79 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(conn.c.obj)
                                          0x8e (size before relaxing)
  .rodata.l2cap_accept.str1.1
-                0x0000000000030b32       0x2c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(l2cap.c.obj)
+                0x0000000000030b31       0x2c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(l2cap.c.obj)
  .rodata.l2cap_create_le_sig_pdu.constprop.0.str1.1
-                0x0000000000030b5e       0x2d zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(l2cap.c.obj)
+                0x0000000000030b5d       0x2d zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(l2cap.c.obj)
  .rodata.bt_l2cap_connected.str1.1
-                0x0000000000030b8b       0x31 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(l2cap.c.obj)
+                0x0000000000030b8a       0x31 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(l2cap.c.obj)
                                          0x49 (size before relaxing)
  .rodata.l2cap_recv.str1.1
-                0x0000000000030bbc       0xbd zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(l2cap.c.obj)
+                0x0000000000030bbb       0xbd zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(l2cap.c.obj)
  .rodata.bt_l2cap_recv.str1.1
-                0x0000000000030c79       0x53 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(l2cap.c.obj)
+                0x0000000000030c78       0x53 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(l2cap.c.obj)
  .rodata.str1.1
-                0x0000000000030ccc       0x10 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(l2cap.c.obj)
+                0x0000000000030ccb       0x10 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(l2cap.c.obj)
                                          0x40 (size before relaxing)
  .rodata.att_get.str1.1
-                0x0000000000030cdc       0x52 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
+                0x0000000000030cdb       0x52 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
  .rodata.find_type_cb.str1.1
-                0x0000000000030d2e       0x48 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
+                0x0000000000030d2d       0x48 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
  .rodata.tx_meta_data_free.str1.1
-                0x0000000000030d76       0x2f zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
+                0x0000000000030d75       0x2f zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
                                          0x47 (size before relaxing)
  .rodata.bt_att_chan_create_pdu.str1.1
-                0x0000000000030da5       0x7b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
+                0x0000000000030da4       0x7b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
                                          0xa8 (size before relaxing)
  .rodata.bt_att_accept.str1.1
-                0x0000000000030e20       0x54 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
+                0x0000000000030e1f       0x54 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
  .rodata.chan_send.str1.1
-                0x0000000000030e74       0x40 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
+                0x0000000000030e73       0x40 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
  .rodata.send_err_rsp.str1.1
-                0x0000000000030eb4       0x2f zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
+                0x0000000000030eb3       0x2f zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
  .rodata.bt_att_recv.str1.1
-                0x0000000000030ee3       0xa8 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
+                0x0000000000030ee2       0xa8 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
  .rodata.bt_att_create_pdu.str1.1
-                0x0000000000030f8b       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
+                0x0000000000030f8a       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
  .rodata.bt_att_create_rsp_pdu.str1.1
-                0x0000000000030fab       0x34 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
+                0x0000000000030faa       0x34 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
  .rodata.att_handle_rsp.str1.1
-                0x0000000000030fdf       0x1c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
+                0x0000000000030fde       0x1c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
  .rodata.att_timeout.str1.1
-                0x0000000000030ffb       0x1f zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
+                0x0000000000030ffa       0x1f zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
                                          0x6b (size before relaxing)
  .rodata.str1.1
-                0x000000000003101a        0x7 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
+                0x0000000000031019        0x7 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(att.c.obj)
  .rodata.db_hash_set.str1.1
-                0x0000000000031021       0x26 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x0000000000031020       0x26 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.db_hash_store.str1.1
-                0x0000000000031047       0x2b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x0000000000031046       0x2b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.sc_store.str1.1
-                0x0000000000031072       0x21 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x0000000000031071       0x21 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.gatt_delayed_store_enqueue.str1.1
-                0x0000000000031093       0x30 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x0000000000031092       0x30 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
                                          0x48 (size before relaxing)
  .rodata.sc_save.str1.1
-                0x00000000000310c3       0x24 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x00000000000310c2       0x24 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.cf_write.str1.1
-                0x00000000000310e7       0x31 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x00000000000310e6       0x31 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.sc_set.str1.1
-                0x0000000000031118       0x68 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x0000000000031117       0x68 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
                                          0x8e (size before relaxing)
  .rodata.bt_gatt_clear_sc.str1.1
-                0x0000000000031180       0x22 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x000000000003117f       0x22 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.sc_clear.str1.1
-                0x00000000000311a2       0x1b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x00000000000311a1       0x1b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.cf_set.str1.1
-                0x00000000000311bd       0xd6 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x00000000000311bc       0xd6 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.bt_gatt_attr_write_ccc.str1.1
-                0x0000000000031293       0x1f zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x0000000000031292       0x1f zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.bt_gatt_store_cf.isra.0.str1.1
-                0x00000000000312b2       0x2e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x00000000000312b1       0x2e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.db_hash_gen.str1.1
-                0x00000000000312e0       0x3c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x00000000000312df       0x3c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.ccc_set_direct.str1.1
-                0x000000000003131c       0x18 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x000000000003131b       0x18 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.gatt_indicate.str1.1
-                0x0000000000031334       0x77 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x0000000000031333       0x77 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.update_ccc.str1.1
-                0x00000000000313ab       0x3b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x00000000000313aa       0x3b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.gatt_notify.str1.1
-                0x00000000000313e6       0x2e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x00000000000313e5       0x2e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.bt_gatt_connected.str1.1
-                0x0000000000031414       0x31 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x0000000000031413       0x31 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
                                          0x35 (size before relaxing)
  .rodata.bt_gatt_store_ccc.str1.1
-                0x0000000000031445       0x23 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x0000000000031444       0x23 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.str1.1
-                0x0000000000031468       0x1c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
+                0x0000000000031467       0x1c zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(gatt.c.obj)
  .rodata.smp_chan_get.str1.1
-                0x0000000000031484       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x0000000000031483       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.bt_smp_accept.str1.1
-                0x00000000000314a4       0x2a zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x00000000000314a3       0x2a zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.smp_send.constprop.0.str1.1
-                0x00000000000314ce       0x28 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x00000000000314cd       0x28 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.smp_dhkey_generate.str1.1
-                0x00000000000314ce       0x1e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x00000000000314cd       0x1e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.smp_ident_info.str1.1
-                0x00000000000314ec       0x1f zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x00000000000314eb       0x1f zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.smp_send_pairing_confirm.str1.1
-                0x000000000003150b       0x21 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x000000000003150a       0x21 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.smp_public_key_periph.str1.1
-                0x000000000003152c       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x000000000003152b       0x20 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.smp_public_key.str1.1
-                0x000000000003154c       0x26 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x000000000003154b       0x26 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.compute_and_check_and_send_periph_dhcheck.str1.1
-                0x0000000000031572       0x6b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x0000000000031571       0x6b zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.smp_pairing_random.str1.1
-                0x00000000000315dd       0x38 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x00000000000315dc       0x38 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.smp_pairing_req.str1.1
-                0x0000000000031615       0x32 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x0000000000031614       0x32 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.smp_pairing_complete.str1.1
-                0x0000000000031647       0x14 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x0000000000031646       0x14 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.smp_error.str1.1
-                0x000000000003165b       0x5d zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x000000000003165a       0x5d zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.bt_smp_recv.str1.1
-                0x00000000000316b8       0xbc zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x00000000000316b7       0xbc zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
                                          0xe0 (size before relaxing)
  .rodata.bt_smp_pkey_ready.str1.1
-                0x0000000000031774       0x1e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x0000000000031773       0x1e zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.smp_ident_addr_info.str1.1
-                0x0000000000031792       0x95 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x0000000000031791       0x95 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
                                          0xad (size before relaxing)
  .rodata.smp_pairing_failed.str1.1
-                0x0000000000031827       0x27 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x0000000000031826       0x27 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.bt_smp_encrypt_change.str1.1
-                0x000000000003184e       0x93 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x000000000003184d       0x93 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.smp_timeout.str1.1
-                0x00000000000318e1       0x11 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x00000000000318e0       0x11 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.CSWTCH.10729
-                0x00000000000318f2        0x8 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x00000000000318f1        0x8 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.CSWTCH.10726
-                0x00000000000318fa        0x9 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x00000000000318f9        0x9 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.CSWTCH.10724
-                0x0000000000031903        0xf zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x0000000000031902        0xf zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.gen_method_sc
-                0x0000000000031912       0x19 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x0000000000031911       0x19 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.gen_method_legacy
-                0x000000000003192b       0x19 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x000000000003192a       0x19 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.str1.1
-                0x0000000000031944        0x7 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
+                0x0000000000031943        0x7 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
  .rodata.id_add.str1.1
-                0x000000000003194b       0x30 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(keys.c.obj)
+                0x000000000003194a       0x30 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(keys.c.obj)
                                          0x48 (size before relaxing)
  .rodata.keys_set.str1.1
-                0x000000000003197b       0x93 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(keys.c.obj)
+                0x000000000003197a       0x93 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(keys.c.obj)
                                          0xfa (size before relaxing)
  .rodata.bt_keys_store.str1.1
-                0x0000000000031a0e       0x22 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(keys.c.obj)
+                0x0000000000031a0d       0x22 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(keys.c.obj)
  .rodata.str1.1
-                0x0000000000031a30       0x10 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(keys.c.obj)
+                0x0000000000031a2f       0x10 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(keys.c.obj)
  .rodata.sys_memcpy_swap.str1.1
-                0x0000000000031a40       0x32 zephyr/subsys/bluetooth/crypto/libsubsys__bluetooth__crypto.a(bt_crypto.c.obj)
+                0x0000000000031a3f       0x32 zephyr/subsys/bluetooth/crypto/libsubsys__bluetooth__crypto.a(bt_crypto.c.obj)
                                          0x4a (size before relaxing)
  .rodata.salt.0
-                0x0000000000031a72       0x10 zephyr/subsys/bluetooth/crypto/libsubsys__bluetooth__crypto.a(bt_crypto.c.obj)
+                0x0000000000031a71       0x10 zephyr/subsys/bluetooth/crypto/libsubsys__bluetooth__crypto.a(bt_crypto.c.obj)
  .rodata.str1.1
-                0x0000000000031a82        0xa zephyr/subsys/bluetooth/crypto/libsubsys__bluetooth__crypto.a(bt_crypto.c.obj)
+                0x0000000000031a81        0xa zephyr/subsys/bluetooth/crypto/libsubsys__bluetooth__crypto.a(bt_crypto.c.obj)
  .rodata.net_buf_reset.str1.1
-                0x0000000000031a8c       0x24 zephyr/subsys/net/libsubsys__net.a(buf.c.obj)
+                0x0000000000031a8b       0x24 zephyr/subsys/net/libsubsys__net.a(buf.c.obj)
                                          0x3c (size before relaxing)
  .rodata.net_buf_alloc_len.str1.1
-                0x0000000000031ab0       0x2d zephyr/subsys/net/libsubsys__net.a(buf.c.obj)
+                0x0000000000031aaf       0x2d zephyr/subsys/net/libsubsys__net.a(buf.c.obj)
  .rodata.str1.1
-                0x0000000000031ab0        0x8 zephyr/subsys/net/libsubsys__net.a(buf.c.obj)
+                0x0000000000031aaf        0x8 zephyr/subsys/net/libsubsys__net.a(buf.c.obj)
  .rodata.net_buf_simple_reserve.str1.1
-                0x0000000000031ab8       0x2b zephyr/subsys/net/libsubsys__net.a(buf_simple.c.obj)
+                0x0000000000031ab7       0x2b zephyr/subsys/net/libsubsys__net.a(buf_simple.c.obj)
                                          0x43 (size before relaxing)
  .rodata.str1.1
-                0x0000000000031ae3        0xf zephyr/subsys/net/libsubsys__net.a(buf_simple.c.obj)
+                0x0000000000031ae2        0xf zephyr/subsys/net/libsubsys__net.a(buf_simple.c.obj)
  .rodata.get_status.str1.1
-                0x0000000000031af2       0x3d zephyr/drivers/clock_control/libdrivers__clock_control.a(clock_control_nrf.c.obj)
+                0x0000000000031af1       0x3d zephyr/drivers/clock_control/libdrivers__clock_control.a(clock_control_nrf.c.obj)
                                          0x55 (size before relaxing)
  .rodata.str1.1
-                0x0000000000031b2f       0x29 zephyr/drivers/clock_control/libdrivers__clock_control.a(clock_control_nrf.c.obj)
+                0x0000000000031b2e       0x29 zephyr/drivers/clock_control/libdrivers__clock_control.a(clock_control_nrf.c.obj)
  .rodata.entropy_nrf5_get_entropy_isr.str1.1
-                0x0000000000031b58       0x32 zephyr/drivers/entropy/libdrivers__entropy.a(entropy_nrf5.c.obj)
+                0x0000000000031b57       0x32 zephyr/drivers/entropy/libdrivers__entropy.a(entropy_nrf5.c.obj)
                                          0x4a (size before relaxing)
  .rodata.str1.1
-                0x0000000000031b8a       0x10 zephyr/drivers/entropy/libdrivers__entropy.a(entropy_nrf5.c.obj)
+                0x0000000000031b89       0x10 zephyr/drivers/entropy/libdrivers__entropy.a(entropy_nrf5.c.obj)
  .rodata.str1.1
-                0x0000000000031b9a        0xf zephyr/drivers/entropy/libdrivers__entropy.a(entropy_bt_hci.c.obj)
+                0x0000000000031b99        0xf zephyr/drivers/entropy/libdrivers__entropy.a(entropy_bt_hci.c.obj)
  .rodata.entropy_cc3xx_rng_get_entropy.str1.1
-                0x0000000000031ba9       0x30 zephyr/drivers/entropy/libdrivers__entropy.a(entropy_cc3xx.c.obj)
+                0x0000000000031ba8       0x30 zephyr/drivers/entropy/libdrivers__entropy.a(entropy_cc3xx.c.obj)
                                          0x48 (size before relaxing)
  .rodata.str1.1
-                0x0000000000031bd9       0x10 zephyr/drivers/entropy/libdrivers__entropy.a(entropy_cc3xx.c.obj)
+                0x0000000000031bd8       0x10 zephyr/drivers/entropy/libdrivers__entropy.a(entropy_cc3xx.c.obj)
  .rodata.qspi_send_cmd.str1.1
-                0x0000000000031be9       0x28 zephyr/drivers/flash/libdrivers__flash.a(nrf_qspi_nor.c.obj)
+                0x0000000000031be8       0x28 zephyr/drivers/flash/libdrivers__flash.a(nrf_qspi_nor.c.obj)
  .rodata.qspi_nor_erase.str1.1
-                0x0000000000031c11       0x95 zephyr/drivers/flash/libdrivers__flash.a(nrf_qspi_nor.c.obj)
+                0x0000000000031c10       0x95 zephyr/drivers/flash/libdrivers__flash.a(nrf_qspi_nor.c.obj)
  .rodata.qspi_nor_init.str1.1
-                0x0000000000031ca6       0x6c zephyr/drivers/flash/libdrivers__flash.a(nrf_qspi_nor.c.obj)
+                0x0000000000031ca5       0x6c zephyr/drivers/flash/libdrivers__flash.a(nrf_qspi_nor.c.obj)
  .rodata.qspi_nor_write.str1.1
-                0x0000000000031d12       0x4f zephyr/drivers/flash/libdrivers__flash.a(nrf_qspi_nor.c.obj)
+                0x0000000000031d11       0x4f zephyr/drivers/flash/libdrivers__flash.a(nrf_qspi_nor.c.obj)
  .rodata.qspi_nor_read.str1.1
-                0x0000000000031d61       0x4e zephyr/drivers/flash/libdrivers__flash.a(nrf_qspi_nor.c.obj)
+                0x0000000000031d60       0x4e zephyr/drivers/flash/libdrivers__flash.a(nrf_qspi_nor.c.obj)
  .rodata.str1.1
-                0x0000000000031daf       0x16 zephyr/drivers/flash/libdrivers__flash.a(nrf_qspi_nor.c.obj)
+                0x0000000000031dae       0x16 zephyr/drivers/flash/libdrivers__flash.a(nrf_qspi_nor.c.obj)
  .rodata.flash_nrf_read.str1.1
-                0x0000000000031dc5       0x22 zephyr/drivers/flash/libdrivers__flash.a(soc_flash_nrf.c.obj)
+                0x0000000000031dc4       0x22 zephyr/drivers/flash/libdrivers__flash.a(soc_flash_nrf.c.obj)
  .rodata.flash_nrf_erase.str1.1
-                0x0000000000031de7       0x24 zephyr/drivers/flash/libdrivers__flash.a(soc_flash_nrf.c.obj)
+                0x0000000000031de6       0x24 zephyr/drivers/flash/libdrivers__flash.a(soc_flash_nrf.c.obj)
  .rodata.flash_nrf_write.str1.1
-                0x0000000000031e0b       0x23 zephyr/drivers/flash/libdrivers__flash.a(soc_flash_nrf.c.obj)
+                0x0000000000031e0a       0x23 zephyr/drivers/flash/libdrivers__flash.a(soc_flash_nrf.c.obj)
  .rodata.str1.1
-                0x0000000000031e2e       0x24 zephyr/drivers/flash/libdrivers__flash.a(soc_flash_nrf.c.obj)
+                0x0000000000031e2d       0x24 zephyr/drivers/flash/libdrivers__flash.a(soc_flash_nrf.c.obj)
  .rodata.gpio_nrfx_manage_callback.str1.1
-                0x0000000000031e52       0x3c zephyr/drivers/gpio/libdrivers__gpio.a(gpio_nrfx.c.obj)
+                0x0000000000031e51       0x3c zephyr/drivers/gpio/libdrivers__gpio.a(gpio_nrfx.c.obj)
                                          0x54 (size before relaxing)
  .rodata.gpio_nrfx_pin_interrupt_configure.str1.1
-                0x0000000000031e8e       0x33 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_nrfx.c.obj)
+                0x0000000000031e8d       0x33 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_nrfx.c.obj)
  .rodata.gpio_nrfx_pin_configure.str1.1
-                0x0000000000031ec1       0x2c zephyr/drivers/gpio/libdrivers__gpio.a(gpio_nrfx.c.obj)
+                0x0000000000031ec0       0x2c zephyr/drivers/gpio/libdrivers__gpio.a(gpio_nrfx.c.obj)
  .rodata.str1.1
-                0x0000000000031eed       0x1c zephyr/drivers/gpio/libdrivers__gpio.a(gpio_nrfx.c.obj)
+                0x0000000000031eec       0x1c zephyr/drivers/gpio/libdrivers__gpio.a(gpio_nrfx.c.obj)
  .rodata.str1.1
-                0x0000000000031f09        0x4 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_common.c.obj)
+                0x0000000000031f08        0x4 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_common.c.obj)
  .rodata.i2c_nrfx_twi_configure.str1.1
-                0x0000000000031f0d       0x17 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twi.c.obj)
+                0x0000000000031f0c       0x17 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twi.c.obj)
  .rodata.twi_0_init.str1.1
-                0x0000000000031f24       0x25 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twi.c.obj)
+                0x0000000000031f23       0x25 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twi.c.obj)
  .rodata.i2c_nrfx_twi_transfer.str1.1
-                0x0000000000031f49       0x59 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twi.c.obj)
+                0x0000000000031f48       0x59 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twi.c.obj)
  .rodata.str1.1
-                0x0000000000031fa2       0x1a zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twi.c.obj)
+                0x0000000000031fa1       0x1a zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twi.c.obj)
  .rodata.kscan_ht16k33_init.str1.1
-                0x0000000000031fbc       0x25 zephyr/drivers/kscan/libdrivers__kscan.a(kscan_ht16k33.c.obj)
+                0x0000000000031fbb       0x25 zephyr/drivers/kscan/libdrivers__kscan.a(kscan_ht16k33.c.obj)
  .rodata.str1.1
-                0x0000000000031fe1       0x16 zephyr/drivers/kscan/libdrivers__kscan.a(kscan_ht16k33.c.obj)
+                0x0000000000031fe0       0x16 zephyr/drivers/kscan/libdrivers__kscan.a(kscan_ht16k33.c.obj)
  .rodata.ht16k33_irq_thread.str1.1
-                0x0000000000031ff7       0x31 zephyr/drivers/led/libdrivers__led.a(ht16k33.c.obj)
+                0x0000000000031ff6       0x31 zephyr/drivers/led/libdrivers__led.a(ht16k33.c.obj)
  .rodata.ht16k33_led_set_brightness.str1.1
-                0x0000000000032028       0x27 zephyr/drivers/led/libdrivers__led.a(ht16k33.c.obj)
+                0x0000000000032027       0x27 zephyr/drivers/led/libdrivers__led.a(ht16k33.c.obj)
  .rodata.ht16k33_led_blink.str1.1
-                0x000000000003204f       0x2c zephyr/drivers/led/libdrivers__led.a(ht16k33.c.obj)
+                0x000000000003204e       0x2c zephyr/drivers/led/libdrivers__led.a(ht16k33.c.obj)
  .rodata.ht16k33_led_set_state.str1.1
-                0x000000000003207b       0x27 zephyr/drivers/led/libdrivers__led.a(ht16k33.c.obj)
+                0x000000000003207a       0x27 zephyr/drivers/led/libdrivers__led.a(ht16k33.c.obj)
                                          0x2a (size before relaxing)
  .rodata.ht16k33_init.str1.1
-                0x00000000000320a2      0x1fd zephyr/drivers/led/libdrivers__led.a(ht16k33.c.obj)
+                0x00000000000320a1      0x1fd zephyr/drivers/led/libdrivers__led.a(ht16k33.c.obj)
                                         0x246 (size before relaxing)
  .rodata.str1.1
-                0x000000000003229f        0xb zephyr/drivers/led/libdrivers__led.a(ht16k33.c.obj)
+                0x000000000003229e        0xb zephyr/drivers/led/libdrivers__led.a(ht16k33.c.obj)
                                          0x13 (size before relaxing)
  .rodata.led_gpio_set_brightness.str1.1
-                0x00000000000322aa       0x49 zephyr/drivers/led/libdrivers__led.a(led_gpio.c.obj)
+                0x00000000000322a9       0x49 zephyr/drivers/led/libdrivers__led.a(led_gpio.c.obj)
  .rodata.led_gpio_init.str1.1
-                0x00000000000322aa       0x73 zephyr/drivers/led/libdrivers__led.a(led_gpio.c.obj)
+                0x00000000000322a9       0x73 zephyr/drivers/led/libdrivers__led.a(led_gpio.c.obj)
  .rodata.str1.1
-                0x000000000003231d        0x9 zephyr/drivers/led/libdrivers__led.a(led_gpio.c.obj)
+                0x000000000003231c        0x9 zephyr/drivers/led/libdrivers__led.a(led_gpio.c.obj)
                                           0xe (size before relaxing)
  .rodata.nrf_gpio_pin_port_decode.str1.1
-                0x0000000000032326       0x4b zephyr/drivers/pinctrl/libdrivers__pinctrl.a(pinctrl_nrf.c.obj)
+                0x0000000000032325       0x4b zephyr/drivers/pinctrl/libdrivers__pinctrl.a(pinctrl_nrf.c.obj)
  .rodata.uarte_0_init.str1.1
-                0x0000000000032326       0x24 zephyr/drivers/serial/libdrivers__serial.a(uart_nrfx_uarte.c.obj)
+                0x0000000000032325       0x24 zephyr/drivers/serial/libdrivers__serial.a(uart_nrfx_uarte.c.obj)
  .rodata.str1.1
-                0x000000000003234a       0x1e zephyr/drivers/serial/libdrivers__serial.a(uart_nrfx_uarte.c.obj)
+                0x0000000000032349       0x1e zephyr/drivers/serial/libdrivers__serial.a(uart_nrfx_uarte.c.obj)
  .rodata.z_impl_gpio_pin_configure.str1.1
-                0x0000000000032368       0x49 modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
+                0x0000000000032367       0x49 modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
  .rodata.get_buttons.str1.1
-                0x0000000000032368       0x1a modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
+                0x0000000000032367       0x1a modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
  .rodata.dk_set_leds_state.part.0.str1.1
-                0x0000000000032382       0x1b modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
+                0x0000000000032381       0x1b modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
  .rodata.callback_ctrl.str1.1
-                0x000000000003239d       0x25 modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
+                0x000000000003239c       0x25 modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
  .rodata.button_pressed.str1.1
-                0x00000000000323c2       0x21 modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
+                0x00000000000323c1       0x21 modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
                                          0x4e (size before relaxing)
  .rodata.buttons_scan_fn.str1.1
-                0x00000000000323e3       0x3b modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
+                0x00000000000323e2       0x3b modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
  .rodata.dk_leds_init.str1.1
-                0x000000000003241e       0x1f modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
+                0x000000000003241d       0x1f modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
  .rodata.dk_buttons_init.str1.1
-                0x000000000003243d       0x5b modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
+                0x000000000003243c       0x5b modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
  .rodata.dk_set_led.str1.1
-                0x0000000000032498       0x20 modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
+                0x0000000000032497       0x20 modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
  .rodata.str1.1
-                0x00000000000324b8       0x14 modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
+                0x00000000000324b7       0x14 modules/nrf/lib/dk_buttons_and_leds/lib..__nrf__lib__dk_buttons_and_leds.a(dk_buttons_and_leds.c.obj)
  .rodata.k_sys_fatal_error_handler.str1.1
-                0x00000000000324cc       0x16 modules/nrf/lib/fatal_error/lib..__nrf__lib__fatal_error.a(fatal_error.c.obj)
+                0x00000000000324cb       0x16 modules/nrf/lib/fatal_error/lib..__nrf__lib__fatal_error.a(fatal_error.c.obj)
  .rodata.str1.1
-                0x00000000000324e2        0xc modules/nrf/lib/fatal_error/lib..__nrf__lib__fatal_error.a(fatal_error.c.obj)
+                0x00000000000324e1        0xc modules/nrf/lib/fatal_error/lib..__nrf__lib__fatal_error.a(fatal_error.c.obj)
  .rodata.sdc_assertion_handler.str1.1
-                0x00000000000324ee       0x2a modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(hci_driver.c.obj)
+                0x00000000000324ed       0x2a modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(hci_driver.c.obj)
  .rodata.hci_driver_open.str1.1
-                0x0000000000032518       0x7d modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(hci_driver.c.obj)
+                0x0000000000032517       0x7d modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(hci_driver.c.obj)
  .rodata.hci_driver_init.str1.1
-                0x0000000000032595       0x27 modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(hci_driver.c.obj)
+                0x0000000000032594       0x27 modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(hci_driver.c.obj)
  .rodata.rand_prio_low_vector_get_blocking.str1.1
-                0x00000000000325bc       0x6d modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(hci_driver.c.obj)
+                0x00000000000325bb       0x6d modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(hci_driver.c.obj)
                                          0x85 (size before relaxing)
  .rodata.hci_driver_receive_process.str1.1
-                0x0000000000032629       0x7b modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(hci_driver.c.obj)
+                0x0000000000032628       0x7b modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(hci_driver.c.obj)
  .rodata.str1.1
-                0x00000000000326a4       0x28 modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(hci_driver.c.obj)
+                0x00000000000326a3       0x28 modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(hci_driver.c.obj)
  .rodata.sys_memcpy_swap.constprop.0.str1.1
-                0x00000000000326cc       0x4a modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(crypto.c.obj)
+                0x00000000000326cb       0x4a modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(crypto.c.obj)
  .rodata.bt_rand.str1.1
-                0x00000000000326cc       0x34 modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(crypto.c.obj)
+                0x00000000000326cb       0x34 modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(crypto.c.obj)
  .rodata.str1.1
-                0x00000000000326cc        0xe modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(crypto.c.obj)
+                0x00000000000326cb        0xe modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(crypto.c.obj)
  .rodata.sys_memcpy_swap.constprop.0.str1.1
-                0x00000000000326da       0x4a modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(ecdh.c.obj)
+                0x00000000000326d9       0x4a modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(ecdh.c.obj)
  .rodata.ecdh_p256_common_secret.str1.1
-                0x00000000000326da       0x26 modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(ecdh.c.obj)
+                0x00000000000326d9       0x26 modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(ecdh.c.obj)
  .rodata.ecdh_cmd_process.str1.1
-                0x0000000000032700       0x15 modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(ecdh.c.obj)
+                0x00000000000326ff       0x15 modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(ecdh.c.obj)
  .rodata.hci_ecdh_init.str1.1
-                0x0000000000032715        0xd modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(ecdh.c.obj)
+                0x0000000000032714        0xd modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(ecdh.c.obj)
  .rodata.debug_private_key_be
-                0x0000000000032722       0x20 modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(ecdh.c.obj)
+                0x0000000000032721       0x20 modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(ecdh.c.obj)
  .rodata.str1.1
-                0x0000000000032742        0xc modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(ecdh.c.obj)
+                0x0000000000032741        0xc modules/nrf/subsys/bluetooth/controller/lib..__nrf__subsys__bluetooth__controller.a(ecdh.c.obj)
  .rodata.m_assert_handler.str1.1
-                0x000000000003274e       0x19 modules/nrf/subsys/mpsl/init/lib..__nrf__subsys__mpsl__init.a(mpsl_init.c.obj)
+                0x000000000003274d       0x19 modules/nrf/subsys/mpsl/init/lib..__nrf__subsys__mpsl__init.a(mpsl_init.c.obj)
  .rodata.mpsl_low_prio_work_handler.str1.1
-                0x0000000000032767       0x2d modules/nrf/subsys/mpsl/init/lib..__nrf__subsys__mpsl__init.a(mpsl_init.c.obj)
+                0x0000000000032766       0x2d modules/nrf/subsys/mpsl/init/lib..__nrf__subsys__mpsl__init.a(mpsl_init.c.obj)
                                          0x45 (size before relaxing)
  .rodata.mpsl_low_prio_init.str1.1
-                0x0000000000032794        0xa modules/nrf/subsys/mpsl/init/lib..__nrf__subsys__mpsl__init.a(mpsl_init.c.obj)
+                0x0000000000032793        0xa modules/nrf/subsys/mpsl/init/lib..__nrf__subsys__mpsl__init.a(mpsl_init.c.obj)
  .rodata.str1.1
-                0x000000000003279e        0xa modules/nrf/subsys/mpsl/init/lib..__nrf__subsys__mpsl__init.a(mpsl_init.c.obj)
+                0x000000000003279d        0xa modules/nrf/subsys/mpsl/init/lib..__nrf__subsys__mpsl__init.a(mpsl_init.c.obj)
  .rodata.nrfx_clock_start.str1.1
-                0x00000000000327a8       0x3d modules/nrf/drivers/mpsl/clock_control/lib..__nrf__drivers__mpsl__clock_control.a(nrfx_clock_mpsl.c.obj)
+                0x00000000000327a7       0x3d modules/nrf/drivers/mpsl/clock_control/lib..__nrf__drivers__mpsl__clock_control.a(nrfx_clock_mpsl.c.obj)
                                          0x55 (size before relaxing)
  .rodata.timeslot_callback.str1.1
-                0x00000000000327e5       0x3a modules/nrf/drivers/mpsl/flash_sync/lib..__nrf__drivers__mpsl__flash_sync.a(flash_sync_mpsl.c.obj)
+                0x00000000000327e4       0x3a modules/nrf/drivers/mpsl/flash_sync/lib..__nrf__drivers__mpsl__flash_sync.a(flash_sync_mpsl.c.obj)
                                          0x52 (size before relaxing)
  .rodata.nrf_flash_sync_exe.str1.1
-                0x000000000003281f       0x38 modules/nrf/drivers/mpsl/flash_sync/lib..__nrf__drivers__mpsl__flash_sync.a(flash_sync_mpsl.c.obj)
+                0x000000000003281e       0x38 modules/nrf/drivers/mpsl/flash_sync/lib..__nrf__drivers__mpsl__flash_sync.a(flash_sync_mpsl.c.obj)
  .rodata.str1.1
-                0x0000000000032857       0x10 modules/nrf/drivers/mpsl/flash_sync/lib..__nrf__drivers__mpsl__flash_sync.a(flash_sync_mpsl.c.obj)
+                0x0000000000032856       0x10 modules/nrf/drivers/mpsl/flash_sync/lib..__nrf__drivers__mpsl__flash_sync.a(flash_sync_mpsl.c.obj)
  .rodata.CSWTCH.14
-                0x0000000000032867        0x6 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(system_nrf52840.c.obj)
+                0x0000000000032866        0x6 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(system_nrf52840.c.obj)
  .rodata.CSWTCH.5
-                0x000000000003286d        0x6 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(system_nrf52840.c.obj)
+                0x000000000003286c        0x6 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(system_nrf52840.c.obj)
  .rodata.release_handler.str1.1
-                0x0000000000032873       0x3e modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
+                0x0000000000032872       0x3e modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
                                          0x56 (size before relaxing)
  .rodata.nrf_gpiote_out_task_get.str1.1
-                0x00000000000328b1       0x35 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
+                0x00000000000328b0       0x35 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
  .rodata.nrf_gpio_pin_port_decode.str1.1
-                0x00000000000328e6       0x33 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
+                0x00000000000328e5       0x33 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
  .rodata.port_offset.1
-                0x00000000000328e6       0x10 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
- .rodata.ports  0x00000000000328f6        0x2 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
+                0x00000000000328e5       0x10 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
+ .rodata.ports  0x00000000000328f5        0x2 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
  .rodata.str1.1
-                0x00000000000328f8        0xc modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
+                0x00000000000328f7        0xc modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
  .rodata.partial_word_create.str1.1
-                0x0000000000032904       0x3c modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_nvmc.c.obj)
+                0x0000000000032903       0x3c modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_nvmc.c.obj)
                                          0x54 (size before relaxing)
  .rodata.str1.1
-                0x0000000000032940        0x9 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_ppi.c.obj)
+                0x000000000003293f        0x9 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_ppi.c.obj)
  .rodata.qspi_xfer.str1.1
-                0x0000000000032949       0x3c modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_qspi.c.obj)
+                0x0000000000032948       0x3c modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_qspi.c.obj)
                                          0x54 (size before relaxing)
  .rodata.nrf_gpio_cfg.constprop.0.str1.1
-                0x0000000000032985       0x33 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_qspi.c.obj)
+                0x0000000000032984       0x33 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_qspi.c.obj)
  .rodata.nrf_gpio_cfg.constprop.0.str1.1
-                0x0000000000032985       0x4b modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twi.c.obj)
+                0x0000000000032984       0x4b modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twi.c.obj)
  .rodata.nrfx_twi_init.str1.1
-                0x0000000000032985       0x3b modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twi.c.obj)
+                0x0000000000032984       0x3b modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twi.c.obj)
  .rodata.str1.1
-                0x00000000000329c0        0x9 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twi.c.obj)
+                0x00000000000329bf        0x9 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twi.c.obj)
  .rodata.nrf_gpio_pin_port_decode.str1.1
-                0x00000000000329c9       0x4b modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twi_twim.c.obj)
+                0x00000000000329c8       0x4b modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twi_twim.c.obj)
  .rodata._DoInit.str1.1
-                0x00000000000329c9        0x9 modules/segger/libmodules__segger.a(SEGGER_RTT.c.obj)
+                0x00000000000329c8        0x9 modules/segger/libmodules__segger.a(SEGGER_RTT.c.obj)
  .rodata._aInitStr.0
-                0x00000000000329d2       0x11 modules/segger/libmodules__segger.a(SEGGER_RTT.c.obj)
+                0x00000000000329d1       0x11 modules/segger/libmodules__segger.a(SEGGER_RTT.c.obj)
  .rodata.z_device_state_init.str1.1
-                0x00000000000329e3       0x23 zephyr/kernel/libkernel.a(device.c.obj)
+                0x00000000000329e2       0x23 zephyr/kernel/libkernel.a(device.c.obj)
                                          0x3b (size before relaxing)
  .rodata.z_fatal_error.str1.1
-                0x0000000000032a06       0xa0 zephyr/kernel/libkernel.a(fatal.c.obj)
+                0x0000000000032a05       0xa0 zephyr/kernel/libkernel.a(fatal.c.obj)
                                          0xc0 (size before relaxing)
  .rodata.str1.1
-                0x0000000000032aa6       0x4a zephyr/kernel/libkernel.a(fatal.c.obj)
+                0x0000000000032aa5       0x4a zephyr/kernel/libkernel.a(fatal.c.obj)
  .rodata.z_cstart.str1.1
-                0x0000000000032af0        0x5 zephyr/kernel/libkernel.a(init.c.obj)
+                0x0000000000032aef        0x5 zephyr/kernel/libkernel.a(init.c.obj)
  .rodata.str1.1
-                0x0000000000032af5        0x3 zephyr/kernel/libkernel.a(init.c.obj)
+                0x0000000000032af4        0x3 zephyr/kernel/libkernel.a(init.c.obj)
  .rodata.statics_init.str1.1
-                0x0000000000032af8       0x22 zephyr/kernel/libkernel.a(kheap.c.obj)
+                0x0000000000032af7       0x22 zephyr/kernel/libkernel.a(kheap.c.obj)
                                          0x3a (size before relaxing)
  .rodata.k_heap_aligned_alloc.str1.1
-                0x0000000000032b1a       0x2d zephyr/kernel/libkernel.a(kheap.c.obj)
+                0x0000000000032b19       0x2d zephyr/kernel/libkernel.a(kheap.c.obj)
  .rodata.init_mem_slab_module.str1.1
-                0x0000000000032b1a       0x25 zephyr/kernel/libkernel.a(mem_slab.c.obj)
+                0x0000000000032b19       0x25 zephyr/kernel/libkernel.a(mem_slab.c.obj)
                                          0x3d (size before relaxing)
  .rodata.k_mem_slab_alloc.str1.1
-                0x0000000000032b3f       0x2d zephyr/kernel/libkernel.a(mem_slab.c.obj)
+                0x0000000000032b3e       0x2d zephyr/kernel/libkernel.a(mem_slab.c.obj)
  .rodata.z_setup_new_thread.str1.1
-                0x0000000000032b3f       0x23 zephyr/kernel/libkernel.a(thread.c.obj)
+                0x0000000000032b3e       0x23 zephyr/kernel/libkernel.a(thread.c.obj)
                                          0x3b (size before relaxing)
  .rodata.idle.str1.1
-                0x0000000000032b62       0x21 zephyr/kernel/libkernel.a(idle.c.obj)
+                0x0000000000032b61       0x21 zephyr/kernel/libkernel.a(idle.c.obj)
                                          0x39 (size before relaxing)
  .rodata.z_impl_k_mutex_lock.str1.1
-                0x0000000000032b83       0x22 zephyr/kernel/libkernel.a(mutex.c.obj)
+                0x0000000000032b82       0x22 zephyr/kernel/libkernel.a(mutex.c.obj)
                                          0x67 (size before relaxing)
  .rodata.queue_insert.str1.1
-                0x0000000000032ba5       0x45 zephyr/kernel/libkernel.a(queue.c.obj)
+                0x0000000000032ba4       0x45 zephyr/kernel/libkernel.a(queue.c.obj)
  .rodata.z_impl_k_sem_give.str1.1
-                0x0000000000032ba5       0x45 zephyr/kernel/libkernel.a(sem.c.obj)
+                0x0000000000032ba4       0x45 zephyr/kernel/libkernel.a(sem.c.obj)
  .rodata.z_impl_k_sem_take.str1.1
-                0x0000000000032ba5       0x20 zephyr/kernel/libkernel.a(sem.c.obj)
+                0x0000000000032ba4       0x20 zephyr/kernel/libkernel.a(sem.c.obj)
  .rodata.k_sys_work_q_init.str1.1
-                0x0000000000032bc5        0x9 zephyr/kernel/libkernel.a(system_work_q.c.obj)
+                0x0000000000032bc4        0x9 zephyr/kernel/libkernel.a(system_work_q.c.obj)
  .rodata.work_queue_main.str1.1
-                0x0000000000032bce       0x21 zephyr/kernel/libkernel.a(work.c.obj)
+                0x0000000000032bcd       0x21 zephyr/kernel/libkernel.a(work.c.obj)
                                          0x66 (size before relaxing)
  .rodata.slice_timeout.str1.1
-                0x0000000000032bef       0x22 zephyr/kernel/libkernel.a(sched.c.obj)
+                0x0000000000032bee       0x22 zephyr/kernel/libkernel.a(sched.c.obj)
                                          0x3a (size before relaxing)
  .rodata.k_sched_time_slice_set.str1.1
-                0x0000000000032c11       0x2d zephyr/kernel/libkernel.a(sched.c.obj)
+                0x0000000000032c10       0x2d zephyr/kernel/libkernel.a(sched.c.obj)
  .rodata.k_sched_lock.str1.1
-                0x0000000000032c11       0x2b zephyr/kernel/libkernel.a(sched.c.obj)
+                0x0000000000032c10       0x2b zephyr/kernel/libkernel.a(sched.c.obj)
  .rodata.z_add_timeout.str1.1
-                0x0000000000032c3c       0x24 zephyr/kernel/libkernel.a(timeout.c.obj)
+                0x0000000000032c3b       0x24 zephyr/kernel/libkernel.a(timeout.c.obj)
                                          0x69 (size before relaxing)
  .rodata.z_timer_expiration_handler.str1.1
-                0x0000000000032c60       0x45 zephyr/kernel/libkernel.a(timer.c.obj)
+                0x0000000000032c5f       0x45 zephyr/kernel/libkernel.a(timer.c.obj)
  .rodata.register_events.str1.1
-                0x0000000000032c60       0x21 zephyr/kernel/libkernel.a(poll.c.obj)
+                0x0000000000032c5f       0x21 zephyr/kernel/libkernel.a(poll.c.obj)
                                          0x66 (size before relaxing)
  .rodata.z_thread_aligned_alloc.str1.1
-                0x0000000000032c81       0x24 zephyr/kernel/libkernel.a(mempool.c.obj)
+                0x0000000000032c80       0x24 zephyr/kernel/libkernel.a(mempool.c.obj)
                                          0x3c (size before relaxing)
  .rodata.boot_banner.str1.1
-                0x0000000000032ca5       0x28 zephyr/kernel/libkernel.a(banner.c.obj)
+                0x0000000000032ca4       0x28 zephyr/kernel/libkernel.a(banner.c.obj)
  .rodata._ctype_
-                0x0000000000032ccd      0x101 /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7e-m/nofp/libc.a(libc_ctype_ctype_.c.o)
-                0x0000000000032ccd                _ctype_
+                0x0000000000032ccc      0x101 /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7e-m/nofp/libc.a(libc_ctype_ctype_.c.o)
+                0x0000000000032ccc                _ctype_
  .rodata.__i_vfprintf.str1.1
-                0x0000000000032dce        0xf /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7e-m/nofp/libc.a(libc_tinystdio_vfiprintf.c.o)
+                0x0000000000032dcd        0xf /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7e-m/nofp/libc.a(libc_tinystdio_vfiprintf.c.o)
  *(SORT_BY_ALIGNMENT(.gnu.linkonce.r.*))
-                0x0000000000032de0                . = ALIGN (0x4)
- *fill*         0x0000000000032ddd        0x3 
-                0x0000000000032de0                __rodata_region_end = .
+                0x0000000000032ddc                . = ALIGN (0x4)
+                0x0000000000032ddc                __rodata_region_end = .
                 0x0000000000032de0                . = ALIGN (_region_min_align)
                 0x0000000000040000                . = ALIGN ((0x1 << LOG2CEIL ((__rodata_region_end - ADDR (rom_start)))))
                 0x0000000000040000                __rom_region_end = ((__rom_region_start + .) - ADDR (rom_start))
@@ -10069,7 +10068,7 @@ rodata          0x000000000002cd80     0x6060
                 0x0000000020000000                . = ALIGN (_region_min_align)
                 0x0000000020000000                _image_ram_start = .
 
-.ramfunc        0x0000000020000000        0x0 load address 0x0000000000032de0
+.ramfunc        0x0000000020000000        0x0 load address 0x0000000000032ddc
                 0x0000000020000000                . = ALIGN (_region_min_align)
                 0x0000000020000000                . = ALIGN ((0x1 << LOG2CEIL (__ramfunc_size)))
                 0x0000000020000000                __ramfunc_start = .
@@ -10079,9 +10078,9 @@ rodata          0x000000000002cd80     0x6060
                 0x0000000020000000                . = ALIGN ((0x1 << LOG2CEIL (__ramfunc_size)))
                 0x0000000020000000                __ramfunc_end = .
                 0x0000000000000000                __ramfunc_size = (__ramfunc_end - __ramfunc_start)
-                0x0000000000032de0                __ramfunc_load_start = LOADADDR (.ramfunc)
+                0x0000000000032ddc                __ramfunc_load_start = LOADADDR (.ramfunc)
 
-datas           0x0000000020000000      0x970 load address 0x0000000000032de0
+datas           0x0000000020000000      0x970 load address 0x0000000000032ddc
                 0x0000000020000000                __data_region_start = .
                 0x0000000020000000                __data_start = .
  *(SORT_BY_ALIGNMENT(.data))
@@ -10348,10 +10347,10 @@ datas           0x0000000020000000      0x970 load address 0x0000000000032de0
  *(SORT_BY_ALIGNMENT(.kernel.*))
                 0x0000000020000970                __data_end = .
                 0x0000000000000970                __data_size = (__data_end - __data_start)
-                0x0000000000032de0                __data_load_start = LOADADDR (datas)
-                0x0000000000032de0                __data_region_load_start = LOADADDR (datas)
+                0x0000000000032ddc                __data_load_start = LOADADDR (datas)
+                0x0000000000032ddc                __data_region_load_start = LOADADDR (datas)
 
-device_states   0x0000000020000970       0x1a load address 0x0000000000033750
+device_states   0x0000000020000970       0x1a load address 0x000000000003374c
                 0x0000000020000970                __device_states_start = .
  *(SORT_BY_ALIGNMENT(.z_devstate))
  .z_devstate    0x0000000020000970        0x2 zephyr/drivers/clock_control/libdrivers__clock_control.a(clock_control_nrf.c.obj)
@@ -10370,30 +10369,30 @@ device_states   0x0000000020000970       0x1a load address 0x0000000000033750
                 0x000000002000098a                __device_states_end = .
 
 log_mpsc_pbuf_area
-                0x000000002000098a        0x0 load address 0x000000000003376a
+                0x000000002000098a        0x0 load address 0x0000000000033766
                 0x000000002000098a                _log_mpsc_pbuf_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._log_mpsc_pbuf.static.*)))
                 0x000000002000098a                _log_mpsc_pbuf_list_end = .
 
 log_msg_ptr_area
-                0x000000002000098a        0x0 load address 0x000000000003376a
+                0x000000002000098a        0x0 load address 0x0000000000033766
                 0x000000002000098a                _log_msg_ptr_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._log_msg_ptr.static.*)))
                 0x000000002000098a                _log_msg_ptr_list_end = .
 
 log_dynamic_area
-                0x000000002000098a        0x0 load address 0x000000000003376a
+                0x000000002000098a        0x0 load address 0x0000000000033766
                 0x000000002000098a                _log_dynamic_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._log_dynamic.static.*)))
                 0x000000002000098a                _log_dynamic_list_end = .
 
-k_timer_area    0x000000002000098a        0x0 load address 0x000000000003376a
+k_timer_area    0x000000002000098a        0x0 load address 0x0000000000033766
                 0x000000002000098a                _k_timer_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._k_timer.static.*)))
                 0x000000002000098a                _k_timer_list_end = .
 
 k_mem_slab_area
-                0x000000002000098c       0x60 load address 0x000000000003376c
+                0x000000002000098c       0x60 load address 0x0000000000033768
                 0x000000002000098c                _k_mem_slab_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._k_mem_slab.static.*)))
  ._k_mem_slab.static.att_slab_
@@ -10407,12 +10406,12 @@ k_mem_slab_area
                 0x00000000200009cc                req_slab
                 0x00000000200009ec                _k_mem_slab_list_end = .
 
-k_heap_area     0x00000000200009ec        0x0 load address 0x00000000000337cc
+k_heap_area     0x00000000200009ec        0x0 load address 0x00000000000337c8
                 0x00000000200009ec                _k_heap_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._k_heap.static.*)))
                 0x00000000200009ec                _k_heap_list_end = .
 
-k_mutex_area    0x00000000200009ec       0x78 load address 0x00000000000337cc
+k_mutex_area    0x00000000200009ec       0x78 load address 0x00000000000337c8
                 0x00000000200009ec                _k_mutex_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._k_mutex.static.*)))
  ._k_mutex.static.asym_mutex_int_
@@ -10434,39 +10433,39 @@ k_mutex_area    0x00000000200009ec       0x78 load address 0x00000000000337cc
                 0x0000000020000a50                sym_mutex_int
                 0x0000000020000a64                _k_mutex_list_end = .
 
-k_stack_area    0x0000000020000a64        0x0 load address 0x0000000000033844
+k_stack_area    0x0000000020000a64        0x0 load address 0x0000000000033840
                 0x0000000020000a64                _k_stack_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._k_stack.static.*)))
                 0x0000000020000a64                _k_stack_list_end = .
 
-k_msgq_area     0x0000000020000a64        0x0 load address 0x0000000000033844
+k_msgq_area     0x0000000020000a64        0x0 load address 0x0000000000033840
                 0x0000000020000a64                _k_msgq_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._k_msgq.static.*)))
                 0x0000000020000a64                _k_msgq_list_end = .
 
-k_mbox_area     0x0000000020000a64        0x0 load address 0x0000000000033844
+k_mbox_area     0x0000000020000a64        0x0 load address 0x0000000000033840
                 0x0000000020000a64                _k_mbox_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._k_mbox.static.*)))
                 0x0000000020000a64                _k_mbox_list_end = .
 
-k_pipe_area     0x0000000020000a64        0x0 load address 0x0000000000033844
+k_pipe_area     0x0000000020000a64        0x0 load address 0x0000000000033840
                 0x0000000020000a64                _k_pipe_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._k_pipe.static.*)))
                 0x0000000020000a64                _k_pipe_list_end = .
 
-k_sem_area      0x0000000020000a64       0x18 load address 0x0000000000033844
+k_sem_area      0x0000000020000a64       0x18 load address 0x0000000000033840
                 0x0000000020000a64                _k_sem_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._k_sem.static.*)))
  ._k_sem.static.sc_local_pkey_ready_
                 0x0000000020000a64       0x18 zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a(smp.c.obj)
                 0x0000000020000a7c                _k_sem_list_end = .
 
-k_event_area    0x0000000020000a7c        0x0 load address 0x000000000003385c
+k_event_area    0x0000000020000a7c        0x0 load address 0x0000000000033858
                 0x0000000020000a7c                _k_event_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._k_event.static.*)))
                 0x0000000020000a7c                _k_event_list_end = .
 
-k_queue_area    0x0000000020000a7c       0x38 load address 0x000000000003385c
+k_queue_area    0x0000000020000a7c       0x38 load address 0x0000000000033858
                 0x0000000020000a7c                _k_queue_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._k_queue.static.*)))
  ._k_queue.static.free_att_tx_meta_data_
@@ -10477,13 +10476,13 @@ k_queue_area    0x0000000020000a7c       0x38 load address 0x000000000003385c
                 0x0000000020000a98                free_tx
                 0x0000000020000ab4                _k_queue_list_end = .
 
-k_condvar_area  0x0000000020000ab4        0x0 load address 0x0000000000033894
+k_condvar_area  0x0000000020000ab4        0x0 load address 0x0000000000033890
                 0x0000000020000ab4                _k_condvar_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._k_condvar.static.*)))
                 0x0000000020000ab4                _k_condvar_list_end = .
 
 net_buf_pool_area
-                0x0000000020000ab4      0x138 load address 0x0000000000033894
+                0x0000000020000ab4      0x138 load address 0x0000000000033890
                 0x0000000020000ab4                _net_buf_pool_list_start = .
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(._net_buf_pool.static.*)))
  ._net_buf_pool.static.acl_tx_pool_
@@ -13079,8 +13078,8 @@ noinit          0x0000000020004780     0x402c
                 0x0000000000003d6a       0x32 /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v7e-m/nofp/libc.a(libc_tinystdio_ungetc.c.o)
  *(SORT_BY_ALIGNMENT(.gnu.attributes))
 
-.last_section   0x00000000000339cc        0x4
-                0x00000000000339cc        0x4 LONG 0xe015e015
-                0x00000000000339d0                _flash_used = ((LOADADDR (.last_section) + SIZEOF (.last_section)) - __rom_region_start)
+.last_section   0x00000000000339c8        0x4
+                0x00000000000339c8        0x4 LONG 0xe015e015
+                0x00000000000339cc                _flash_used = ((LOADADDR (.last_section) + SIZEOF (.last_section)) - __rom_region_start)
 OUTPUT(zephyr/zephyr.elf elf32-littlearm)
 LOAD linker stubs

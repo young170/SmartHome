@@ -34,7 +34,7 @@ Section Headers:
   [10] log_const_area    PROGBITS        0002cbb8 02ccb8 000150 00   A  0   0  4
   [11] settings_han[...] PROGBITS        0002cd08 02ce08 000078 00   A  0   0  4
   [12] tbss              NOBITS          0002cd80 02ce80 000008 00 WAT  0   0  4
-  [13] rodata            PROGBITS        0002cd80 02ce80 006060 00   A  0   0 16
+  [13] rodata            PROGBITS        0002cd80 02ce80 00605c 00   A  0   0 16
   [14] .ramfunc          PROGBITS        20000000 033ad0 000000 00   W  0   0  1
   [15] datas             PROGBITS        20000000 032ee0 000970 00  WA  0   0  8
   [16] device_states     PROGBITS        20000970 033850 00001a 00  WA  0   0  1
@@ -55,7 +55,7 @@ Section Headers:
   [31] .debug_loc        PROGBITS        00000000 301b2a 069650 00      0   0  1
   [32] .debug_ranges     PROGBITS        00000000 36b180 00f038 00      0   0  8
   [33] .ARM.attributes   ARM_ATTRIBUTES  00000000 37a1b8 000034 00      0   0  1
-  [34] .last_section     PROGBITS        000339cc 033acc 000004 00   A  0   0  1
+  [34] .last_section     PROGBITS        000339c8 033acc 000004 00   A  0   0  1
   [35] .symtab           SYMTAB          00000000 37a1ec 021080 10     36 5854  4
   [36] .strtab           STRTAB          00000000 39b26c 016679 00      0   0  1
   [37] .shstrtab         STRTAB          00000000 3b18e5 0001cd 00      0   0  1
@@ -68,9 +68,9 @@ Key to Flags:
 Program Headers:
   Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
   EXIDX          0x02c8ec 0x0002c7ec 0x0002c7ec 0x00008 0x00008 R   0x4
-  LOAD           0x000100 0x00000000 0x00000000 0x32de0 0x32de0 RWE 0x10
-  LOAD           0x032ee0 0x20000000 0x00032de0 0x00bec 0x00bec RW  0x8
-  LOAD           0x033acc 0x000339cc 0x000339cc 0x00004 0x00004 R   0x1
+  LOAD           0x000100 0x00000000 0x00000000 0x32ddc 0x32ddc RWE 0x10
+  LOAD           0x032ee0 0x20000000 0x00032ddc 0x00bec 0x00bec RW  0x8
+  LOAD           0x033acc 0x000339c8 0x000339c8 0x00004 0x00004 R   0x1
   LOAD           0x000000 0x20000c00 0x20000c00 0x00000 0x07bac RW  0x40
   TLS            0x02ce80 0x0002cd80 0x0002cd80 0x00000 0x00008 R   0x4
 
