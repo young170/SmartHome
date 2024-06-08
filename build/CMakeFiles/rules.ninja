@@ -6,7 +6,7 @@
 # It is included in the main 'build.ninja'.
 
 # =============================================================================
-# Project: peripheral_lbs
+# Project: ble_peripheral_example
 # Configurations: 
 # =============================================================================
 # =============================================================================
@@ -385,25 +385,6 @@ rule C_STATIC_LIBRARY_LINKER__subsys__bluetooth__host_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__subsys__bluetooth__crypto_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ccache /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for linking C static library.
-
-rule C_STATIC_LIBRARY_LINKER__subsys__bluetooth__crypto_
-  command = $PRE_LINK && ccache /opt/nordic/ncs/toolchains/20d68df7e5/Cellar/cmake/3.20.5/bin/cmake -E rm -f $TARGET_FILE && ccache /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && ccache /opt/nordic/ncs/toolchains/20d68df7e5/Cellar/cmake/3.20.5/bin/cmake -E touch $TARGET_FILE && $POST_BUILD
-  description = Linking C static library $TARGET_FILE
-  restat = $RESTAT
-
-
-#############################################
-# Rule for compiling C files.
-
 rule C_COMPILER__subsys__net_
   depfile = $DEP_FILE
   deps = gcc
@@ -491,25 +472,6 @@ rule C_COMPILER__drivers__entropy_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__entropy_
-  command = $PRE_LINK && ccache /opt/nordic/ncs/toolchains/20d68df7e5/Cellar/cmake/3.20.5/bin/cmake -E rm -f $TARGET_FILE && ccache /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && ccache /opt/nordic/ncs/toolchains/20d68df7e5/Cellar/cmake/3.20.5/bin/cmake -E touch $TARGET_FILE && $POST_BUILD
-  description = Linking C static library $TARGET_FILE
-  restat = $RESTAT
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER__drivers__flash_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ccache /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for linking C static library.
-
-rule C_STATIC_LIBRARY_LINKER__drivers__flash_
   command = $PRE_LINK && ccache /opt/nordic/ncs/toolchains/20d68df7e5/Cellar/cmake/3.20.5/bin/cmake -E rm -f $TARGET_FILE && ccache /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && ccache /opt/nordic/ncs/toolchains/20d68df7e5/Cellar/cmake/3.20.5/bin/cmake -E touch $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -784,25 +746,6 @@ rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__drivers__mpsl__clock_control_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__.2e.2e__nrf__drivers__mpsl__flash_sync_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ccache /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for linking C static library.
-
-rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__drivers__mpsl__flash_sync_
-  command = $PRE_LINK && ccache /opt/nordic/ncs/toolchains/20d68df7e5/Cellar/cmake/3.20.5/bin/cmake -E rm -f $TARGET_FILE && ccache /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && ccache /opt/nordic/ncs/toolchains/20d68df7e5/Cellar/cmake/3.20.5/bin/cmake -E touch $TARGET_FILE && $POST_BUILD
-  description = Linking C static library $TARGET_FILE
-  restat = $RESTAT
-
-
-#############################################
-# Rule for compiling C files.
-
 rule C_COMPILER__.2e.2e__nrf__drivers__hw_cc310_
   depfile = $DEP_FILE
   deps = gcc
@@ -880,7 +823,7 @@ rule C_STATIC_LIBRARY_LINKER__kernel_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /opt/nordic/ncs/toolchains/20d68df7e5/Cellar/cmake/3.20.5/bin/cmake --regenerate-during-build -S/Users/gimseongbin/Desktop/24-1/SmartHome -B/Users/gimseongbin/Desktop/24-1/SmartHome/build
+  command = /opt/nordic/ncs/toolchains/20d68df7e5/Cellar/cmake/3.20.5/bin/cmake --regenerate-during-build -S/Users/gimseongbin/Desktop/24-1/IoT-Development-with-Nordic-Zephyr/codes/T4_example/ble_peripheral_example -B/Users/gimseongbin/Desktop/24-1/IoT-Development-with-Nordic-Zephyr/codes/T4_example/ble_peripheral_example/build
   description = Re-running CMake...
   generator = 1
 

@@ -6,15 +6,7 @@
                 
 #define Z_SYSCALL_DRIVER_ENTROPY(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, entropy, ENTROPY)
 
-#define Z_SYSCALL_DRIVER_FLASH(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, flash, FLASH)
-
 #define Z_SYSCALL_DRIVER_GPIO(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, gpio, GPIO)
-
-#define Z_SYSCALL_DRIVER_I2C(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, i2c, I2C)
-
-#define Z_SYSCALL_DRIVER_KSCAN(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, kscan, KSCAN)
-
-#define Z_SYSCALL_DRIVER_LED(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, led, LED)
 
 #define Z_SYSCALL_DRIVER_UART(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, uart, UART)
 
@@ -50,17 +42,25 @@
 
 #define Z_SYSCALL_DRIVER_ESPI_SAF(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, espi_saf, ESPI_SAF)
 
+#define Z_SYSCALL_DRIVER_FLASH(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, flash, FLASH)
+
 #define Z_SYSCALL_DRIVER_FPGA(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, fpga, FPGA)
 
 #define Z_SYSCALL_DRIVER_FUEL_GAUGE(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, fuel_gauge, FUEL_GAUGE)
 
 #define Z_SYSCALL_DRIVER_HWSPINLOCK(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, hwspinlock, HWSPINLOCK)
 
+#define Z_SYSCALL_DRIVER_I2C(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, i2c, I2C)
+
 #define Z_SYSCALL_DRIVER_I2S(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, i2s, I2S)
 
 #define Z_SYSCALL_DRIVER_I3C(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, i3c, I3C)
 
 #define Z_SYSCALL_DRIVER_IPM(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, ipm, IPM)
+
+#define Z_SYSCALL_DRIVER_KSCAN(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, kscan, KSCAN)
+
+#define Z_SYSCALL_DRIVER_LED(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, led, LED)
 
 #define Z_SYSCALL_DRIVER_MBOX(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, mbox, MBOX)
 

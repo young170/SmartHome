@@ -1,3 +1,1 @@
-osource "/Users/gimseongbin/Desktop/24-1/SmartHome/boards/shields/*/Kconfig.defconfig"
-osource "/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs/boards/shields/*/Kconfig.defconfig"
 osource "/opt/nordic/ncs/v2.5.2/nrf/boards/shields/*/Kconfig.defconfig"

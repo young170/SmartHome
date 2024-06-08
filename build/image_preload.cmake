@@ -1,9 +1,8 @@
 # Generated file that can be used to preload variant images
 set(BOARD "nrf52840dk_nrf52840" CACHE INTERNAL "NCS child image controlled")
-set(BOARD_ROOT "/Users/gimseongbin/Desktop/24-1/SmartHome;/opt/nordic/ncs/v2.5.2/sample_projects/peripheral_lbs;/opt/nordic/ncs/v2.5.2/nrf;/opt/nordic/ncs/v2.5.2/zephyr" CACHE INTERNAL "NCS child image controlled")
-set(CACHED_CONF_FILE "/Users/gimseongbin/Desktop/24-1/SmartHome/prj.conf" CACHE INTERNAL "NCS child image controlled")
+set(CACHED_CONF_FILE "/Users/gimseongbin/Desktop/24-1/IoT-Development-with-Nordic-Zephyr/codes/T4_example/ble_peripheral_example/prj.conf" CACHE INTERNAL "NCS child image controlled")
 set(CONF_FILE_BUILD_TYPE "" CACHE INTERNAL "NCS child image controlled")
-set(DTC_OVERLAY_FILE "/Users/gimseongbin/Desktop/24-1/SmartHome/nrf52840dk_nrf52840.overlay" CACHE INTERNAL "NCS child image controlled")
+set(DTC_OVERLAY_FILE "/Users/gimseongbin/Desktop/24-1/IoT-Development-with-Nordic-Zephyr/codes/T4_example/ble_peripheral_example/nrf52840dk_nrf52840.overlay" CACHE INTERNAL "NCS child image controlled")
 set(EXTRA_DTC_OVERLAY_FILE "nrf52840dk_nrf52840.overlay" CACHE INTERNAL "NCS child image controlled")
 set(EXTRA_DTC_OVERLAY_FILE "nrf52840dk_nrf52840.overlay" CACHE INTERNAL "NCS child image controlled")
 set(NCS_TOOLCHAIN_VERSION "NONE" CACHE INTERNAL "NCS child image controlled")

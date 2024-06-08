@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "kscan.h": "c",
-        "led.h": "c"
+        "led.h": "c",
+        "bluetooth.h": "c",
+        "uuid.h": "c",
+        "hci.h": "c",
+        "gatt.h": "c"
     }
 }

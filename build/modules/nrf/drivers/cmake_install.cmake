@@ -39,21 +39,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/modules/nrf/drivers/mpsl/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/IoT-Development-with-Nordic-Zephyr/codes/T4_example/ble_peripheral_example/build/modules/nrf/drivers/mpsl/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/modules/nrf/drivers/hw_cc310/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/IoT-Development-with-Nordic-Zephyr/codes/T4_example/ble_peripheral_example/build/modules/nrf/drivers/hw_cc310/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/modules/nrf/drivers/entropy/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/IoT-Development-with-Nordic-Zephyr/codes/T4_example/ble_peripheral_example/build/modules/nrf/drivers/entropy/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/modules/nrf/drivers/serial/cmake_install.cmake")
+  include("/Users/gimseongbin/Desktop/24-1/IoT-Development-with-Nordic-Zephyr/codes/T4_example/ble_peripheral_example/build/modules/nrf/drivers/serial/cmake_install.cmake")
 endif()
 

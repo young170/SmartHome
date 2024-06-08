@@ -1,22 +1,8 @@
-#
-# Copyright (c) 2018 Nordic Semiconductor
-#
-# SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
-#
 cmake_minimum_required(VERSION 3.20.0)
-
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
-project(peripheral_lbs)
 
-# NORDIC SDK APP START
-target_sources(app PRIVATE
-  src/bluetooth.c
-  src/buttons.c
-  src/led.c
-  src/sensors.c
-  main.c
-)
+project(ble_peripheral_example)
+
+target_sources(app PRIVATE main.c src/my_service.c src/buttons.c src/ht16k33_led.c src/sensors.c)
 
 target_include_directories(app PRIVATE include)
-
-# NORDIC SDK APP END
