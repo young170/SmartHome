@@ -1,21 +1,28 @@
 #include <zephyr/drivers/gpio.h>
 #include <dk_buttons_and_leds.h>
 #include "buttons.h"
+#include "sensors.h"
 
-static int humidity = 42;
-static int temperature = 14;
 extern struct bt_conn *my_connection;
 
 struct k_work button1_work;
 void button1_work_handler(struct k_work *work) {
-    display_value_ht16k33(1);
+    int humidity = get_humidity();
+    if (humidity < 0) {
+        return;
+    }
+    display_value_ht16k33(humidity);
     my_service_send(my_connection, humidity, (uint16_t)sizeof(humidity));
 }
 K_WORK_DEFINE(button1_work, button1_work_handler);
 
 struct k_work button2_work;
 void button2_work_handler(struct k_work *work) {
-    display_value_ht16k33(2);
+    int temperature = get_temperature();
+    if (temperature < 0) {
+        return;
+    }
+    display_value_ht16k33(temperature);
     my_service_send(my_connection, temperature, (uint16_t)sizeof(temperature));
 }
 K_WORK_DEFINE(button2_work, button2_work_handler);

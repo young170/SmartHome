@@ -1,12 +1,12 @@
 {
     "__net_socket": [
-        "net_context",
-        "modem_socket",
         "dispatcher_context",
         "spair",
         "net_mgmt_socket",
         "tls_context",
-        "websocket_context"
+        "websocket_context",
+        "modem_socket",
+        "net_context"
     ],
     "__subsystem": [
         "entropy_driver_api",
@@ -14,6 +14,7 @@
         "i2c_driver_api",
         "kscan_driver_api",
         "led_driver_api",
+        "sensor_driver_api",
         "uart_driver_api",
         "crypto_driver_api",
         "adc_driver_api",
@@ -51,7 +52,6 @@
         "retained_mem_driver_api",
         "rtc_driver_api",
         "sdhc_driver_api",
-        "sensor_driver_api",
         "smbus_driver_api",
         "spi_driver_api",
         "syscon_driver_api",

@@ -1168,8 +1168,17 @@ zephyr_udc0: &usbd {
  status = "okay";
 };
 # 0 "<command-line>" 2
-# 1 "/Users/gimseongbin/Desktop/24-1/IoT-Development-with-Nordic-Zephyr/codes/T4_example/ble_peripheral_example/nrf52840dk_nrf52840.overlay" 1
-# 13 "/Users/gimseongbin/Desktop/24-1/IoT-Development-with-Nordic-Zephyr/codes/T4_example/ble_peripheral_example/nrf52840dk_nrf52840.overlay"
+# 1 "/Users/gimseongbin/Desktop/24-1/SmartHome/nrf52840dk_nrf52840.overlay" 1
+# 14 "/Users/gimseongbin/Desktop/24-1/SmartHome/nrf52840dk_nrf52840.overlay"
+/ {
+ dht22 {
+  compatible = "aosong,dht";
+  status = "okay";
+  dio-gpios = <&gpio0 11 ((1 << 4) | (1 << 0))>;
+  dht22;
+ };
+};
+
 &i2c0 {
     clock-frequency = <100000>;
 
@@ -1184,7 +1193,16 @@ zephyr_udc0: &usbd {
 };
 # 0 "<command-line>" 2
 # 1 "./nrf52840dk_nrf52840.overlay" 1
-# 13 "./nrf52840dk_nrf52840.overlay"
+# 14 "./nrf52840dk_nrf52840.overlay"
+/ {
+ dht22 {
+  compatible = "aosong,dht";
+  status = "okay";
+  dio-gpios = <&gpio0 11 ((1 << 4) | (1 << 0))>;
+  dht22;
+ };
+};
+
 &i2c0 {
     clock-frequency = <100000>;
 

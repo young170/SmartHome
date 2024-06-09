@@ -142,25 +142,6 @@ ztest :
  shell_subcmds_area : SUBALIGN(4) { _shell_subcmds_list_start = .; KEEP(*(SORT_BY_NAME(._shell_subcmds.static.*))); _shell_subcmds_list_end = .; } > FLASH
  shell_dynamic_subcmds_area : SUBALIGN(4) { _shell_dynamic_subcmds_list_start = .; KEEP(*(SORT_BY_NAME(._shell_dynamic_subcmds.static.*))); _shell_dynamic_subcmds_list_end = .; } > FLASH
  cfb_font_area : SUBALIGN(4) { _cfb_font_list_start = .; KEEP(*(SORT_BY_NAME(._cfb_font.static.*))); _cfb_font_list_end = .; } > FLASH
- tdata : ALIGN_WITH_INPUT
- {
-  *(.tdata .tdata.* .gnu.linkonce.td.*);
- } > FLASH
- tbss : ALIGN_WITH_INPUT
- {
-  *(.tbss .tbss.* .gnu.linkonce.tb.* .tcommon);
- } > FLASH
- PROVIDE(__tdata_start = LOADADDR(tdata));
- PROVIDE(__tdata_size = SIZEOF(tdata));
- PROVIDE(__tdata_end = __tdata_start + __tdata_size);
- PROVIDE(__tdata_align = ALIGNOF(tdata));
- PROVIDE(__tbss_start = ADDR(tbss));
- PROVIDE(__tbss_size = SIZEOF(tbss));
- PROVIDE(__tbss_end = __tbss_start + __tbss_size);
- PROVIDE(__tbss_align = ALIGNOF(tbss));
- PROVIDE(__tls_start = __tdata_start);
- PROVIDE(__tls_end = __tbss_end);
- PROVIDE(__tls_size = __tbss_end - __tdata_start);
     rodata :
  {
  *(.rodata)

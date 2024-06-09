@@ -165,6 +165,8 @@ static void error(void)
 
 int main(void)
 {
+	const struct device *const dht22 = DEVICE_DT_GET_ONE(aosong_dht);
+
 	int blink_status = 0;
 	int err = 0;
 	uint32_t number = 0;
@@ -186,6 +188,12 @@ int main(void)
         printk("HT16K33 LED init failed\n");
         return 0;
     }
+
+	err = init_dht(dht22);
+	if (err) {
+		printk("DHT22 init failed\n");
+		return 0;
+	}
 
 	k_sem_init(&ble_init_ok, 0, 1);
 	err = bt_enable(bt_ready);

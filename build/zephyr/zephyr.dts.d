@@ -20,5 +20,5 @@ empty_file.o: /opt/nordic/ncs/v2.5.2/zephyr/misc/empty_file.c \
  /opt/nordic/ncs/v2.5.2/zephyr/dts/arm/nordic/override.dtsi \
  /opt/nordic/ncs/v2.5.2/zephyr/boards/arm/nrf52840dk_nrf52840/nrf52840dk_nrf52840-pinctrl.dtsi \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h \
- /Users/gimseongbin/Desktop/24-1/IoT-Development-with-Nordic-Zephyr/codes/T4_example/ble_peripheral_example/nrf52840dk_nrf52840.overlay \
+ /Users/gimseongbin/Desktop/24-1/SmartHome/nrf52840dk_nrf52840.overlay \
  nrf52840dk_nrf52840.overlay

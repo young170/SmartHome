@@ -789,4 +789,10 @@
 		#io-channel-cells = < 0x1 >;
 		io-channel-map = < 0x0 &adc 0x1 >, < 0x1 &adc 0x2 >, < 0x2 &adc 0x4 >, < 0x3 &adc 0x5 >, < 0x4 &adc 0x6 >, < 0x5 &adc 0x7 >;
 	};
+	dht22 {
+		compatible = "aosong,dht";
+		status = "okay";
+		dio-gpios = < &gpio0 0xb 0x11 >;
+		dht22;
+	};
 };
