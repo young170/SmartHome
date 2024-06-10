@@ -32,3 +32,15 @@
         };
     };
 };
+
+/ {
+    aliases {
+        sw0 = &pin7_button0;
+    };
+
+    buttons {
+        pin7_button0: button_0 {
+            gpios = <&gpio0 7 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        };
+    };
+};

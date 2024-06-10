@@ -165,11 +165,7 @@ static void error(void)
 
 int main(void)
 {
-	const struct device *const dht22 = DEVICE_DT_GET_ONE(aosong_dht);
-
-	int blink_status = 0;
 	int err = 0;
-	uint32_t number = 0;
 
 	err = configure_gpio_directions(gpio_sw_list, ARRAY_SIZE(gpio_sw_list));
     if (err) {
@@ -189,7 +185,7 @@ int main(void)
         return 0;
     }
 
-	err = init_dht(dht22);
+	err = init_dht();
 	if (err) {
 		printk("DHT22 init failed\n");
 		return 0;
