@@ -159,7 +159,7 @@ static void error(void)
 {
 	while (true) {
 		printk("Error!\n");
-		/* Spin for ever */
+		/* Spin forever */
 		k_sleep(K_MSEC(1000)); //1000ms
 	}
 }
@@ -169,12 +169,14 @@ int main(void)
 {
 	int err = 0;
 
+	// set BTNs as output
 	err = configure_gpio_directions(gpio_sw_list, ARRAY_SIZE(gpio_sw_list));
     if (err) {
         printk("Error: config GPIO\n");
         return 0;
     }
 
+	// set BTN INT
     err = configure_gpio_interrupts(gpio_sw_list, ARRAY_SIZE(gpio_sw_list));
     if (err) {
         printk("Error: interrupt config GPIO\n");
@@ -193,6 +195,7 @@ int main(void)
 		return 0;
 	}
 
+	///////////////// Bluetooth Initialization /////////////////
 	k_sem_init(&ble_init_ok, 0, 1);
 	err = bt_enable(bt_ready);
 
@@ -202,11 +205,6 @@ int main(void)
 		error(); //Catch error
 	}
 
-	/* 	Bluetooth stack should be ready in less than 100 msec. 								\
-																							\
-		We use this semaphore to wait for bt_enable to call bt_ready before we proceed 		\
-		to the main loop. By using the semaphore to block execution we allow the RTOS to 	\
-		execute other tasks while we wait. */
 	err = k_sem_take(&ble_init_ok, K_MSEC(500));
 	if (!err)
 	{
@@ -217,7 +215,9 @@ int main(void)
 		error(); //Catch error
 	}
 
+	///////////////// Start Bluetooth Connection /////////////////
 	my_service_init();
 
+	///////////////// Start Sensor Timer /////////////////
 	k_timer_start(&sensor_update_timer, K_SECONDS(10), K_SECONDS(10));
 }

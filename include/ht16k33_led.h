@@ -114,6 +114,7 @@ static const int number_led_matrix_arr [MAX_LED_MATRIX_IDX+1][MAX_LED_MATRIX_NUM
 } };
 
 int init_led_ht16k33(void);
+// given an integer value, display on HT16K33 Led Matrix, range 0~99 (inclusive)
 int display_value_ht16k33(int value);
 
 #endif // LED_H

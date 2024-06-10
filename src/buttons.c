@@ -7,6 +7,7 @@
 
 extern struct bt_conn *my_connection;
 
+///////////////// BTN Work Queue Callback Handlers /////////////////
 struct k_work button1_work;
 void button1_work_handler(struct k_work *work) {
     int humidity = get_humidity();
@@ -41,7 +42,7 @@ void button4_work_handler(struct k_work *work) {
 }
 K_WORK_DEFINE(button4_work, button4_work_handler);
 
-// Work queue
+///////////////// Sensor Timer Work Queue Callback Handler /////////////////
 struct k_work sensor_work_que;
 void sensor_work_handler_cb(struct k_work *sensor_worker) {
 	// publish measured sensor values
@@ -60,6 +61,7 @@ void sensor_update_timer_expiry_cb(struct k_timer *timer_id) {
 }
 K_TIMER_DEFINE(sensor_update_timer, sensor_update_timer_expiry_cb, NULL);
 
+///////////////// BTN INT Service Routine /////////////////
 void button1_isr(const struct device *dev, struct gpio_callback *cb, uint32_t pins) {
     k_work_submit(&button1_work);
 }
@@ -76,6 +78,7 @@ void button4_isr(const struct device *dev, struct gpio_callback *cb, uint32_t pi
     k_work_submit(&button4_work);
 }
 
+// check ready and configure as input
 int configure_gpio_directions(struct gpio_dt_spec *sw_list, int sw_list_len) {
     for (int i = 0; i < sw_list_len; i++) {
         if (!gpio_is_ready_dt(&sw_list[i])) {
@@ -91,6 +94,7 @@ int configure_gpio_directions(struct gpio_dt_spec *sw_list, int sw_list_len) {
     return 0;
 }
 
+// register/map routines and handlers for BTNs
 int configure_gpio_interrupts(struct gpio_dt_spec *sw_list, int sw_list_len) {
     void (*btn_isr_arr[])(const struct device *dev, struct gpio_callback *cb, uint32_t pins) = {
         button1_isr,
