@@ -1,4 +1,4 @@
-#include "sensors.h"
+#include "dht22_sensor.h"
 
 const struct device *const dht22 = DEVICE_DT_GET_ONE(aosong_dht);
 

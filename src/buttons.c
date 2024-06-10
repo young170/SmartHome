@@ -3,7 +3,7 @@
 #include "buttons.h"
 #include "ht16k33_led.h"
 #include "my_service.h"
-#include "sensors.h"
+#include "dht22_sensor.h"
 
 extern struct bt_conn *my_connection;
 

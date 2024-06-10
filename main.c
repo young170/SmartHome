@@ -26,7 +26,7 @@
 #include <zephyr/bluetooth/gatt.h>
 
 #include "buttons.h"
-#include "sensors.h"
+#include "dht22_sensor.h"
 #include "ht16k33_led.h"
 #include "my_service.h"
 
