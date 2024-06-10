@@ -45,11 +45,12 @@ K_WORK_DEFINE(button4_work, button4_work_handler);
 struct k_work sensor_work_que;
 void sensor_work_handler_cb(struct k_work *sensor_worker) {
 	// publish measured sensor values
+    // my_service_send(my_connection, &temperature, (uint16_t)sizeof(temperature));
 	printk("Publish sensor values\n");
 }
 K_WORK_DEFINE(sensor_work_que, sensor_work_handler_cb);
 
-// timer
+// sensor timer
 struct k_timer sensor_update_timer;
 void sensor_update_timer_expiry_cb(struct k_timer *timer_id) {
     if (k_work_submit(&sensor_work_que) < 0) {

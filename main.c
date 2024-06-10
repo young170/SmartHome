@@ -33,6 +33,8 @@
 #define RUN_STATUS_LED          DK_LED1
 #define RUN_LED_BLINK_INTERVAL  1000
 
+extern struct k_timer sensor_update_timer;
+
 static struct gpio_dt_spec gpio_sw_list[] = {
     GPIO_DT_SPEC_GET_OR(DT_ALIAS(sw0), gpios, {0}),
     GPIO_DT_SPEC_GET_OR(DT_ALIAS(sw1), gpios, {0}),
@@ -216,4 +218,6 @@ int main(void)
 	}
 
 	my_service_init();
+
+	k_timer_start(&sensor_update_timer, K_SECONDS(10), K_SECONDS(10));
 }
