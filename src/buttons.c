@@ -1,10 +1,13 @@
 #include <zephyr/drivers/gpio.h>
 #include <dk_buttons_and_leds.h>
 #include "buttons.h"
+#include "ht16k33_led.h"
+#include "my_service.h"
 #include "sensors.h"
 
 extern struct bt_conn *my_connection;
 
+///////////////// BTN Work Queue Callback Handlers /////////////////
 struct k_work button1_work;
 void button1_work_handler(struct k_work *work) {
     int humidity = get_humidity();
@@ -12,7 +15,7 @@ void button1_work_handler(struct k_work *work) {
         return;
     }
     display_value_ht16k33(humidity);
-    my_service_send(my_connection, humidity, (uint16_t)sizeof(humidity));
+    my_service_send(my_connection, &humidity, (uint16_t)sizeof(humidity));
 }
 K_WORK_DEFINE(button1_work, button1_work_handler);
 
@@ -23,7 +26,7 @@ void button2_work_handler(struct k_work *work) {
         return;
     }
     display_value_ht16k33(temperature);
-    my_service_send(my_connection, temperature, (uint16_t)sizeof(temperature));
+    my_service_send(my_connection, &temperature, (uint16_t)sizeof(temperature));
 }
 K_WORK_DEFINE(button2_work, button2_work_handler);
 
@@ -40,15 +43,16 @@ void button4_work_handler(struct k_work *work) {
 }
 K_WORK_DEFINE(button4_work, button4_work_handler);
 
-// Work queue
+///////////////// Sensor Timer Work Queue Callback Handler /////////////////
 struct k_work sensor_work_que;
 void sensor_work_handler_cb(struct k_work *sensor_worker) {
 	// publish measured sensor values
+    // my_service_send(my_connection, &temperature, (uint16_t)sizeof(temperature));
 	printk("Publish sensor values\n");
 }
 K_WORK_DEFINE(sensor_work_que, sensor_work_handler_cb);
 
-// timer
+// sensor timer
 struct k_timer sensor_update_timer;
 void sensor_update_timer_expiry_cb(struct k_timer *timer_id) {
     if (k_work_submit(&sensor_work_que) < 0) {
@@ -58,6 +62,7 @@ void sensor_update_timer_expiry_cb(struct k_timer *timer_id) {
 }
 K_TIMER_DEFINE(sensor_update_timer, sensor_update_timer_expiry_cb, NULL);
 
+///////////////// BTN INT Service Routine /////////////////
 void button1_isr(const struct device *dev, struct gpio_callback *cb, uint32_t pins) {
     k_work_submit(&button1_work);
 }
@@ -74,6 +79,7 @@ void button4_isr(const struct device *dev, struct gpio_callback *cb, uint32_t pi
     k_work_submit(&button4_work);
 }
 
+// check ready and configure as input
 int configure_gpio_directions(struct gpio_dt_spec *sw_list, int sw_list_len) {
     for (int i = 0; i < sw_list_len; i++) {
         if (!gpio_is_ready_dt(&sw_list[i])) {
@@ -89,6 +95,7 @@ int configure_gpio_directions(struct gpio_dt_spec *sw_list, int sw_list_len) {
     return 0;
 }
 
+// register/map routines and handlers for BTNs
 int configure_gpio_interrupts(struct gpio_dt_spec *sw_list, int sw_list_len) {
     void (*btn_isr_arr[])(const struct device *dev, struct gpio_callback *cb, uint32_t pins) = {
         button1_isr,
@@ -115,26 +122,4 @@ int configure_gpio_interrupts(struct gpio_dt_spec *sw_list, int sw_list_len) {
         gpio_add_callback(sw_list[i].port, button_cb_data_arr[i]);
     }
     return 0;
-}
-
-static void button_changed(uint32_t button_state, uint32_t has_changed) {
-    if (has_changed & DK_BTN1_MSK) {
-        uint32_t user_button_state = button_state & DK_BTN1_MSK;
-
-        int err = bt_lbs_send_button_state(user_button_state);
-        if (err == -EACCES) {
-            printk("Notify not enabled\n");
-        } else if (err != 0) {
-            printk("Send button state error\n");
-        }
-    }
-}
-
-int init_buttons(void) {
-    int err;
-    err = dk_buttons_init(button_changed);
-    if (err) {
-        printk("Cannot init buttons (err: %d)\n", err);
-    }
-    return err;
 }
