@@ -1522,9 +1522,10 @@
 
 /* Existence and alternate IDs: */
 #define DT_N_S_buttons_S_button_0_EXISTS 1
-#define DT_N_ALIAS_sw0             DT_N_S_buttons_S_button_0
-#define DT_N_ALIAS_mcuboot_button0 DT_N_S_buttons_S_button_0
-#define DT_N_NODELABEL_button0     DT_N_S_buttons_S_button_0
+#define DT_N_ALIAS_sw0              DT_N_S_buttons_S_button_0
+#define DT_N_ALIAS_mcuboot_button0  DT_N_S_buttons_S_button_0
+#define DT_N_NODELABEL_button0      DT_N_S_buttons_S_button_0
+#define DT_N_NODELABEL_pin7_button0 DT_N_S_buttons_S_button_0
 
 /* Macros for properties that are special in the specification: */
 #define DT_N_S_buttons_S_button_0_REG_NUM 0
@@ -1539,7 +1540,7 @@
 /* Generic property macros: */
 #define DT_N_S_buttons_S_button_0_P_gpios_IDX_0_EXISTS 1
 #define DT_N_S_buttons_S_button_0_P_gpios_IDX_0_PH DT_N_S_soc_S_gpio_50000000
-#define DT_N_S_buttons_S_button_0_P_gpios_IDX_0_VAL_pin 11
+#define DT_N_S_buttons_S_button_0_P_gpios_IDX_0_VAL_pin 7
 #define DT_N_S_buttons_S_button_0_P_gpios_IDX_0_VAL_pin_EXISTS 1
 #define DT_N_S_buttons_S_button_0_P_gpios_IDX_0_VAL_flags 17
 #define DT_N_S_buttons_S_button_0_P_gpios_IDX_0_VAL_flags_EXISTS 1

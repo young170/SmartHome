@@ -1191,6 +1191,18 @@ zephyr_udc0: &usbd {
         };
     };
 };
+
+/ {
+    aliases {
+        sw0 = &pin7_button0;
+    };
+
+    buttons {
+        pin7_button0: button_0 {
+            gpios = <&gpio0 7 ((1 << 4) | (1 << 0))>;
+        };
+    };
+};
 # 0 "<command-line>" 2
 # 1 "./nrf52840dk_nrf52840.overlay" 1
 # 14 "./nrf52840dk_nrf52840.overlay"
@@ -1212,6 +1224,18 @@ zephyr_udc0: &usbd {
 
         keyscan {
             compatible = "holtek,ht16k33-keyscan";
+        };
+    };
+};
+
+/ {
+    aliases {
+        sw0 = &pin7_button0;
+    };
+
+    buttons {
+        pin7_button0: button_0 {
+            gpios = <&gpio0 7 ((1 << 4) | (1 << 0))>;
         };
     };
 };
