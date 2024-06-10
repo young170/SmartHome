@@ -14,6 +14,8 @@
 
 #define Z_SYSCALL_DRIVER_LED(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, led, LED)
 
+#define Z_SYSCALL_DRIVER_SENSOR(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, sensor, SENSOR)
+
 #define Z_SYSCALL_DRIVER_UART(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, uart, UART)
 
 #define Z_SYSCALL_DRIVER_CRYPTO(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, crypto, CRYPTO)
@@ -87,8 +89,6 @@
 #define Z_SYSCALL_DRIVER_RTC(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, rtc, RTC)
 
 #define Z_SYSCALL_DRIVER_SDHC(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, sdhc, SDHC)
-
-#define Z_SYSCALL_DRIVER_SENSOR(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, sensor, SENSOR)
 
 #define Z_SYSCALL_DRIVER_SMBUS(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, smbus, SMBUS)
 

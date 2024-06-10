@@ -20,7 +20,7 @@ config:
   hex_file: zephyr.hex
   bin_file: zephyr.bin
   # Host tools:
-  gdb: /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb
+  gdb: /opt/nordic/ncs/toolchains/20d68df7e5/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb-py
 
 # Runner specific arguments
 args:

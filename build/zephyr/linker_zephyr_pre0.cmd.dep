@@ -1,13 +1,13 @@
 linker_zephyr_pre0.cmd: \
  /opt/nordic/ncs/v2.5.2/zephyr/soc/arm/nordic_nrf/nrf52/linker.ld \
- /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/include/generated/autoconf.h \
+ /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/zephyr/include/generated/autoconf.h \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/arch/arm/aarch32/cortex_m/scripts/linker.ld \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/sections.h \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/section_tags.h \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/toolchain.h \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/toolchain/gcc.h \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/devicetree.h \
- /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/include/generated/devicetree_generated.h \
+ /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/zephyr/include/generated/devicetree_generated.h \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/sys/util.h \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/sys/util_macro.h \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/sys/util_internal.h \
@@ -29,12 +29,12 @@ linker_zephyr_pre0.cmd: \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/devicetree_regions.h \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/linker-defs.h \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/toolchain/common.h \
- /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/include/generated/offsets.h \
+ /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/zephyr/include/generated/offsets.h \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/linker-tool.h \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/linker-tool-gcc.h \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/sys/mem_manage.h \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/rel-sections.ld \
- /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/include/generated/snippets-rom-start.ld \
+ /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/zephyr/include/generated/snippets-rom-start.ld \
  /opt/nordic/ncs/v2.5.2/zephyr/include/../arch/common/rom_start_address.ld \
  /opt/nordic/ncs/v2.5.2/zephyr/include/../arch/common/rom_start_offset.ld \
  /opt/nordic/ncs/v2.5.2/zephyr/include/../arch/arm/core/aarch32/vector_table.ld \
@@ -53,19 +53,19 @@ linker_zephyr_pre0.cmd: \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/common-rom/common-rom-debug.ld \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/common-rom/common-rom-misc.ld \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/thread-local-storage.ld \
- /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/include/generated/snippets-rodata.ld \
+ /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/zephyr/include/generated/snippets-rodata.ld \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/kobject-rom.ld \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/cplusplus-rom.ld \
- /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/include/generated/snippets-ram-sections.ld \
+ /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/zephyr/include/generated/snippets-ram-sections.ld \
  /opt/nordic/ncs/v2.5.2/zephyr/include/../arch/common/ramfunc.ld \
- /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/include/generated/snippets-ramfunc-section.ld \
- /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/include/generated/snippets-rwdata.ld \
+ /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/zephyr/include/generated/snippets-ramfunc-section.ld \
+ /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/zephyr/include/generated/snippets-rwdata.ld \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/common-ram.ld \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/kobject-data.ld \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/cplusplus-ram.ld \
- /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/include/generated/snippets-data-sections.ld \
- /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/include/generated/snippets-noinit.ld \
- /Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/include/generated/snippets-sections.ld \
+ /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/zephyr/include/generated/snippets-data-sections.ld \
+ /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/zephyr/include/generated/snippets-noinit.ld \
+ /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/zephyr/include/generated/snippets-sections.ld \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/intlist.ld \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/ram-end.ld \
  /opt/nordic/ncs/v2.5.2/zephyr/include/zephyr/linker/debug-sections.ld

@@ -880,7 +880,7 @@ rule C_STATIC_LIBRARY_LINKER__kernel_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /opt/nordic/ncs/toolchains/20d68df7e5/Cellar/cmake/3.20.5/bin/cmake --regenerate-during-build -S/Users/gimseongbin/Desktop/24-1/SmartHome -B/Users/gimseongbin/Desktop/24-1/SmartHome/build
+  command = /opt/nordic/ncs/toolchains/20d68df7e5/Cellar/cmake/3.20.5/bin/cmake --regenerate-during-build -S/Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome -B/Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build
   description = Re-running CMake...
   generator = 1
 
