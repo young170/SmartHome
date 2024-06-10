@@ -39,11 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/sensor/dht/cmake_install.cmake")
+  include("/Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/zephyr/drivers/sensor/dht/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/gimseongbin/Desktop/24-1/SmartHome/build/zephyr/drivers/sensor/nrf5/cmake_install.cmake")
+  include("/Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/zephyr/drivers/sensor/nrf5/cmake_install.cmake")
 endif()
 

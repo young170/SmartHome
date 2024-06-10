@@ -29,6 +29,7 @@ K_WORK_DEFINE(button2_work, button2_work_handler);
 
 struct k_work button3_work;
 void button3_work_handler(struct k_work *work) {
+    
 	display_value_ht16k33(3);
 }
 K_WORK_DEFINE(button3_work, button3_work_handler);
