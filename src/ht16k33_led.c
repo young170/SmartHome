@@ -1,6 +1,3 @@
-#include <zephyr/drivers/led.h>
-#include <zephyr/drivers/kscan.h>
-#include <zephyr/devicetree.h>
 #include "ht16k33_led.h"
 
 const struct device *ht16k33_led;

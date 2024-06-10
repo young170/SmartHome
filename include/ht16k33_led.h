@@ -1,6 +1,11 @@
 #ifndef LED_H
 #define LED_H
 
+#include <zephyr/kernel.h>
+#include <zephyr/drivers/led.h>
+#include <zephyr/drivers/kscan.h>
+#include <zephyr/devicetree.h>
+
 #define MAX_LED_MATRIX_IDX 9
 #define MAX_LED_MATRIX_NUM 127
 // Get a node identifier for a node label.

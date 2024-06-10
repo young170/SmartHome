@@ -1,6 +1,8 @@
 #include <zephyr/drivers/gpio.h>
 #include <dk_buttons_and_leds.h>
 #include "buttons.h"
+#include "ht16k33_led.h"
+#include "my_service.h"
 #include "sensors.h"
 
 extern struct bt_conn *my_connection;
@@ -12,7 +14,7 @@ void button1_work_handler(struct k_work *work) {
         return;
     }
     display_value_ht16k33(humidity);
-    my_service_send(my_connection, humidity, (uint16_t)sizeof(humidity));
+    my_service_send(my_connection, &humidity, (uint16_t)sizeof(humidity));
 }
 K_WORK_DEFINE(button1_work, button1_work_handler);
 
@@ -23,7 +25,7 @@ void button2_work_handler(struct k_work *work) {
         return;
     }
     display_value_ht16k33(temperature);
-    my_service_send(my_connection, temperature, (uint16_t)sizeof(temperature));
+    my_service_send(my_connection, &temperature, (uint16_t)sizeof(temperature));
 }
 K_WORK_DEFINE(button2_work, button2_work_handler);
 
@@ -114,26 +116,4 @@ int configure_gpio_interrupts(struct gpio_dt_spec *sw_list, int sw_list_len) {
         gpio_add_callback(sw_list[i].port, button_cb_data_arr[i]);
     }
     return 0;
-}
-
-static void button_changed(uint32_t button_state, uint32_t has_changed) {
-    if (has_changed & DK_BTN1_MSK) {
-        uint32_t user_button_state = button_state & DK_BTN1_MSK;
-
-        int err = bt_lbs_send_button_state(user_button_state);
-        if (err == -EACCES) {
-            printk("Notify not enabled\n");
-        } else if (err != 0) {
-            printk("Send button state error\n");
-        }
-    }
-}
-
-int init_buttons(void) {
-    int err;
-    err = dk_buttons_init(button_changed);
-    if (err) {
-        printk("Cannot init buttons (err: %d)\n", err);
-    }
-    return err;
 }
