@@ -46,12 +46,6 @@ static ssize_t on_receive(struct bt_conn *conn,
         printk("%02X", buffer[i]);
     }
     printk("\n");
-
-    if (buffer[0] != 01) {
-        dk_set_led_on(DK_LED2);
-    } else {
-        dk_set_led_off(DK_LED2);
-    }
     
 	return len;
 }
