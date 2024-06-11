@@ -193,6 +193,7 @@ static void error(void)
 }
 
 
+
 /*
  * Copyright (c) 2022 Libre Solar Technologies GmbH
  *
@@ -322,7 +323,6 @@ void serial_write() {
 int get_co2_ppm() {
 	return co2_ppm;
 }
-
 
 int main(void)
 {

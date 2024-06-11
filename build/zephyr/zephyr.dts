@@ -24,7 +24,7 @@
 		led2 = &led2;
 		led3 = &led3;
 		pwm-led0 = &pwm_led0;
-		sw0 = &pin7_button0;
+		sw0 = &button0;
 		sw1 = &button1;
 		sw2 = &button2;
 		sw3 = &button3;
@@ -756,8 +756,8 @@
 	};
 	buttons {
 		compatible = "gpio-keys";
-		button0: pin7_button0: button_0 {
-			gpios = < &gpio0 0x7 0x11 >;
+		button0: button_0 {
+			gpios = < &gpio0 0xb 0x11 >;
 			label = "Push button switch 0";
 			zephyr,code = < 0xb >;
 		};

@@ -1195,15 +1195,15 @@ zephyr_udc0: &usbd {
 
 / {
     aliases {
-        sw0 = &pin7_button0;
+
         myserial = &uart1;
     };
 
-    buttons {
-        pin7_button0: button_0 {
-            gpios = <&gpio0 7 ((1 << 4) | (1 << 0))>;
-        };
-    };
+
+
+
+
+
 };
 
 
