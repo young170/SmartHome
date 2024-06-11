@@ -1,5 +1,4 @@
 #include <zephyr/drivers/gpio.h>
-#include <dk_buttons_and_leds.h>
 #include "buttons.h"
 #include "ht16k33_led.h"
 #include "my_service.h"
@@ -47,8 +46,11 @@ K_WORK_DEFINE(button4_work, button4_work_handler);
 struct k_work sensor_work_que;
 void sensor_work_handler_cb(struct k_work *sensor_worker) {
 	// publish measured sensor values
-    // my_service_send(my_connection, &temperature, (uint16_t)sizeof(temperature));
-	printk("Publish sensor values\n");
+    int temperature = get_temperature();
+    if (temperature < 0) {
+        return;
+    }
+    my_service_send(my_connection, &temperature, (uint16_t)sizeof(temperature));
 }
 K_WORK_DEFINE(sensor_work_que, sensor_work_handler_cb);
 
