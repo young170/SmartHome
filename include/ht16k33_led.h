@@ -5,7 +5,10 @@
 #include <zephyr/drivers/led.h>
 #include <zephyr/drivers/kscan.h>
 #include <zephyr/devicetree.h>
+#include <stdlib.h>
+#include <string.h>
 
+#define MAX_FACE_MATRIX_IDX 1
 #define MAX_LED_MATRIX_IDX 9
 #define MAX_LED_MATRIX_NUM 127
 // Get a node identifier for a node label.
@@ -111,10 +114,84 @@ static const int number_led_matrix_arr [MAX_LED_MATRIX_IDX+1][MAX_LED_MATRIX_NUM
         0,0,0,0,0,0,1,0,
         0,0,0,0,0,0,1,0,
         0,0,0,0,0,0,1,0
-} };
+    }
+};
+
+static const int bad_face_led_matrix_arr[MAX_FACE_MATRIX_IDX+1][MAX_LED_MATRIX_NUM+1] = {
+    {
+        0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,1,0,
+        0,0,0,0,0,0,1,0,
+        0,0,0,0,0,0,1,0,
+        0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,1,1,
+        0,0,0,0,0,1,0,0,
+        0,0,0,0,1,0,0,0
+    },
+    {
+        0,0,0,0,0,0,0,0,
+        0,1,0,0,0,0,0,0,
+        0,1,0,0,0,0,0,0,
+        0,1,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,
+        1,1,0,0,0,0,0,0,
+        0,0,1,0,0,0,0,0,
+        0,0,0,1,0,0,0,0
+    }
+};
+
+static const int normal_face_led_matrix_arr[MAX_FACE_MATRIX_IDX+1][MAX_LED_MATRIX_NUM+1] = {
+    {
+        0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,1,0,
+        0,0,0,0,0,0,1,0,
+        0,0,0,0,0,0,1,0,
+        0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,
+        0,0,0,0,1,1,1,1,
+        0,0,0,0,0,0,0,0
+    },
+    {
+        0,0,0,0,0,0,0,0,
+        0,1,0,0,0,0,0,0,
+        0,1,0,0,0,0,0,0,
+        0,1,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,
+        1,1,1,1,0,0,0,0,
+        0,0,0,0,0,0,0,0
+    }
+};
+
+static const int good_face_led_matrix_arr[MAX_FACE_MATRIX_IDX+1][MAX_LED_MATRIX_NUM+1] = {
+    {
+        0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,1,0,
+        0,0,0,0,0,0,1,0,
+        0,0,0,0,0,0,1,0,
+        0,0,0,0,0,0,0,0,
+        0,0,0,0,1,0,0,0,
+        0,0,0,0,0,1,0,0,
+        0,0,0,0,0,0,1,1
+    },
+    {
+        0,0,0,0,0,0,0,0,
+        0,1,0,0,0,0,0,0,
+        0,1,0,0,0,0,0,0,
+        0,1,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,
+        0,0,0,1,0,0,0,0,
+        0,0,1,0,0,0,0,0,
+        1,1,0,0,0,0,0,0
+    }
+};
 
 int init_led_ht16k33(void);
 // given an integer value, display on HT16K33 Led Matrix, range 0~99 (inclusive)
 int display_value_ht16k33(int value);
+int display_number_matrix(int value);
+int display_face_state_matrix(int state);
+int **allocate_led_matrix_arr(const int led_matrix_placeholder[][MAX_LED_MATRIX_NUM + 1], int max_idx);
+void free_led_matrix_arr(int **ptr, int max_idx);
 
 #endif // LED_H

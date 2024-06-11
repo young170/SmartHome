@@ -4,6 +4,12 @@
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/kernel.h>
 
+enum co2_lv {
+  BAD,
+  NORMAL,
+  GOOD
+}; 
+
 // Function declarations for button and GPIO setup
 int configure_gpio_interrupts(struct gpio_dt_spec *sw_list, int sw_list_len);
 int configure_gpio_directions(struct gpio_dt_spec *sw_list, int sw_list_len);

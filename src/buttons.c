@@ -13,7 +13,10 @@ void button1_work_handler(struct k_work *work) {
     if (humidity < 0) {
         return;
     }
-    display_value_ht16k33(humidity);
+    if (display_number_matrix(humidity) != 0) {
+        printk("Display error\n");
+    }
+
     my_service_send(my_connection, &humidity, (uint16_t)sizeof(humidity));
 }
 K_WORK_DEFINE(button1_work, button1_work_handler);
@@ -24,7 +27,10 @@ void button2_work_handler(struct k_work *work) {
     if (temperature < 0) {
         return;
     }
-    display_value_ht16k33(temperature);
+    if (display_number_matrix(temperature) != 0) {
+        printk("Display error\n");
+    }
+
     my_service_send(my_connection, &temperature, (uint16_t)sizeof(temperature));
 }
 K_WORK_DEFINE(button2_work, button2_work_handler);
@@ -34,7 +40,20 @@ void button3_work_handler(struct k_work *work) {
     if (co2_ppm <= 0) {
         return;
     }
-    display_value_ht16k33(co2_ppm);
+
+    enum co2_lv curr_co2_lv;
+    if (co2_ppm > 800) {
+        curr_co2_lv = BAD;
+    } else if (co2_ppm > 450) {
+        curr_co2_lv = NORMAL;
+    } else { // great
+        curr_co2_lv = GOOD;
+    }
+
+    if (display_face_state_matrix(curr_co2_lv) != 0) {
+        printk("Display error\n");
+    }
+    
     my_service_send(my_connection, &co2_ppm, (uint16_t)sizeof(co2_ppm));
 }
 
@@ -42,7 +61,7 @@ K_WORK_DEFINE(button3_work, button3_work_handler);
 
 struct k_work button4_work;
 void button4_work_handler(struct k_work *work) {
-	display_value_ht16k33(4);
+	display_number_matrix(4);
 }
 K_WORK_DEFINE(button4_work, button4_work_handler);
 

@@ -193,15 +193,6 @@ static void error(void)
 }
 
 
-
-/*
- * Copyright (c) 2022 Libre Solar Technologies GmbH
- *
- * SPDX-License-Identifier: Apache-2.0
- */
-
-
-
 uint8_t check_uart_fsm(uint8_t reset, uint8_t read_data) {
 	if(reset)
 	   uart_fsm_state = UART_FSM_IDLE;
@@ -238,7 +229,6 @@ uint8_t check_uart_fsm(uint8_t reset, uint8_t read_data) {
 	}
 	return uart_fsm_state;
 }
-
 
 unsigned char getCheckSum(char *packet) {
 	unsigned char i, checksum=0;
@@ -290,7 +280,7 @@ void serial_callback(const struct device *dev, void *user_data) {
 	  checksum = getCheckSum(rx_buf);
 	  checksum_ok = (checksum == rx_buf[8]);
 	  if (checksum_ok) {
-		printk("Checksum OK (%d == %d, index=%d)\n", checksum, rx_buf[8], rx_buf_pos);
+		// printk("Checksum OK (%d == %d, index=%d)\n", checksum, rx_buf[8], rx_buf_pos);
 	 
 	     // check if we received all data and checksum is OK
 	    value_calc_flag = (rx_buf_pos == MSG_SIZE);
@@ -298,7 +288,7 @@ void serial_callback(const struct device *dev, void *user_data) {
 		  high = rx_buf[2];
 		  low = rx_buf[3];
 		  co2_ppm = (high * CO2_MULTIPLIER) + low;
-		  printk("CO2: %d ppm (high = %d, low = %d)\n", co2_ppm , high, low);
+		//   printk("CO2: %d ppm (high = %d, low = %d)\n", co2_ppm , high, low);
 		// print message buffer
 		  for (int i = 0; i < MSG_SIZE; i+=1) {
 			printk("%x ", rx_buf[i]);
