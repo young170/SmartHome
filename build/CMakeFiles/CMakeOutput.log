@@ -32,12 +32,3 @@ Copyright (C) 2022 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-Performing C SOURCE FILE Test check_fmacro_prefix_map__Users_choejunhyeog_Documents_classes_2024_1_MicroProcess_final_SmartHome_CMAKE_SOURCE_DIR_C__nostartfiles__nostdlib__isystem___opt_nordic_ncs_toolchains_20d68df7e5_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem___opt_nordic_ncs_toolchains_20d68df7e5_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
-Change Dir: /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/opt/nordic/ncs/toolchains/20d68df7e5/bin/ninja cmTC_fbb21 && [1/2] Building C object CMakeFiles/cmTC_fbb21.dir/src.c.obj
-[2/2] Linking C executable cmTC_fbb21
-
-
-Source file was:
-int main(void) { return 0; }

@@ -212,9 +212,6 @@
 /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/modules/nrf/lib/CMakeFiles/edit_cache.dir
 /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/modules/nrf/lib/bin/CMakeFiles/rebuild_cache.dir
 /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/modules/nrf/lib/bin/CMakeFiles/edit_cache.dir
-/Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/modules/nrf/lib/dk_buttons_and_leds/CMakeFiles/rebuild_cache.dir
-/Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/modules/nrf/lib/dk_buttons_and_leds/CMakeFiles/edit_cache.dir
-/Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/modules/nrf/lib/dk_buttons_and_leds/CMakeFiles/..__nrf__lib__dk_buttons_and_leds.dir
 /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/modules/nrf/lib/multithreading_lock/CMakeFiles/rebuild_cache.dir
 /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/modules/nrf/lib/multithreading_lock/CMakeFiles/edit_cache.dir
 /Users/choejunhyeog/Documents/classes/2024-1/MicroProcess/final/SmartHome/build/modules/nrf/lib/multithreading_lock/CMakeFiles/..__nrf__lib__multithreading_lock.dir

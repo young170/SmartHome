@@ -15,9 +15,12 @@ int init_led_ht16k33(void) {
 }
 
 int display_value_ht16k33(int value) {
-    if (value < 0 || value > 99) {
+    if (value < 0 || value > 999) {
         printk("Error: Invalid value\n");
         return -1;
+    }
+    if (value > 99) {
+        value = value /10;
     }
 
     if (!device_is_ready(ht16k33_led)) {

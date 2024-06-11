@@ -1174,7 +1174,7 @@ zephyr_udc0: &usbd {
  dht22 {
   compatible = "aosong,dht";
   status = "okay";
-  dio-gpios = <&gpio0 11 ((1 << 4) | (1 << 0))>;
+  dio-gpios = <&gpio0 13 ((1 << 4) | (1 << 0))>;
   dht22;
  };
 };
@@ -1192,16 +1192,55 @@ zephyr_udc0: &usbd {
     };
 };
 
+
 / {
     aliases {
-        sw0 = &pin7_button0;
+
+        myserial = &uart1;
     };
 
-    buttons {
-        pin7_button0: button_0 {
-            gpios = <&gpio0 7 ((1 << 4) | (1 << 0))>;
-        };
-    };
+
+
+
+
+
+};
+
+
+
+
+
+
+
+arduino_serial: &uart1 {
+    status = "okay";
+    compatible = "nordic,nrf-uart";
+ current-speed = <9600>;
+ pinctrl-0 = <&uart1_default>;
+ pinctrl-1 = <&uart1_sleep>;
+ pinctrl-names = "default", "sleep";
+};
+
+&pinctrl {
+ uart1_default: uart1_default {
+  group1 {
+   psels = <((((((1) * 32U) + (10)) & 0x7FU) << 0U) | ((1U & 0xFFFFU) << 16U))>;
+   bias-pull-up;
+  };
+  group2 {
+
+               psels = <((((((1) * 32U) + (8)) & 0x7FU) << 0U) | ((0U & 0xFFFFU) << 16U))>;
+  };
+ };
+
+ uart1_sleep: uart1_sleep {
+  group1 {
+   psels = <((((((1) * 32U) + (10)) & 0x7FU) << 0U) | ((1U & 0xFFFFU) << 16U))>,
+    <((((((1) * 32U) + (11)) & 0x7FU) << 0U) | ((0U & 0xFFFFU) << 16U))>;
+
+   low-power-enable;
+  };
+ };
 };
 # 0 "<command-line>" 2
 # 1 "/opt/nordic/ncs/v2.5.2/zephyr/misc/empty_file.c"
