@@ -164,7 +164,6 @@ static void error(void)
 	}
 }
 
-
 int main(void)
 {
 	int err = 0;
