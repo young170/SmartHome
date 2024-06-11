@@ -30,11 +30,15 @@ void button2_work_handler(struct k_work *work) {
 }
 K_WORK_DEFINE(button2_work, button2_work_handler);
 
-struct k_work button3_work;
 void button3_work_handler(struct k_work *work) {
-    
-	display_value_ht16k33(3);
+    int co2_ppm = get_co2_ppm();
+    if (co2_ppm <= 0) {
+        return;
+    }
+    display_value_ht16k33(co2_ppm);
+    my_service_send(my_connection, &co2_ppm, (uint16_t)sizeof(co2_ppm));
 }
+
 K_WORK_DEFINE(button3_work, button3_work_handler);
 
 struct k_work button4_work;
@@ -74,6 +78,7 @@ void button2_isr(const struct device *dev, struct gpio_callback *cb, uint32_t pi
 void button3_isr(const struct device *dev, struct gpio_callback *cb, uint32_t pins) {
     k_work_submit(&button3_work);
 }
+
 
 void button4_isr(const struct device *dev, struct gpio_callback *cb, uint32_t pins) {
     k_work_submit(&button4_work);

@@ -33,6 +33,7 @@
 		mcuboot-led0 = &led0;
 		watchdog0 = &wdt0;
 		spi-flash0 = &mx25r64;
+		myserial = &uart1;
 	};
 	soc {
 		#address-cells = < 0x1 >;
@@ -464,11 +465,11 @@
 			status = "okay";
 		};
 		uart1: arduino_serial: uart@40028000 {
-			compatible = "nordic,nrf-uarte";
+			compatible = "nordic,nrf-uart";
 			reg = < 0x40028000 0x1000 >;
 			interrupts = < 0x28 0x1 >;
-			status = "disabled";
-			current-speed = < 0x1c200 >;
+			status = "okay";
+			current-speed = < 0x2580 >;
 			pinctrl-0 = < &uart1_default >;
 			pinctrl-1 = < &uart1_sleep >;
 			pinctrl-names = "default", "sleep";
@@ -575,17 +576,17 @@
 		uart1_default: uart1_default {
 			phandle = < 0x10 >;
 			group1 {
-				psels = < 0x10021 >;
+				psels = < 0x1002a >;
 				bias-pull-up;
 			};
 			group2 {
-				psels = < 0x22 >;
+				psels = < 0x28 >;
 			};
 		};
 		uart1_sleep: uart1_sleep {
 			phandle = < 0x11 >;
 			group1 {
-				psels = < 0x10021 >, < 0x22 >;
+				psels = < 0x1002a >, < 0x2b >;
 				low-power-enable;
 			};
 		};
@@ -792,7 +793,7 @@
 	dht22 {
 		compatible = "aosong,dht";
 		status = "okay";
-		dio-gpios = < &gpio0 0xb 0x11 >;
+		dio-gpios = < &gpio0 0xd 0x11 >;
 		dht22;
 	};
 };
