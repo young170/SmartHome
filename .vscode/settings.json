@@ -6,6 +6,9 @@
         "uuid.h": "c",
         "hci.h": "c",
         "gatt.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c"
     }
 }

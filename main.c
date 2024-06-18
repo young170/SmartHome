@@ -69,8 +69,20 @@ static const struct adc_dt_spec adc_channels[] = {
 int sound_level = 0;
 long map(long x, long in_min, long in_max, long out_min, long out_max)
 {
-        return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+    long result;
+    __asm volatile (
+        "SUB %[x], %[x], %[in_min]\n\t"
+        "SUB %[out_max], %[out_max], %[out_min]\n\t"
+        "SUB %[in_max], %[in_max], %[in_min]\n\t"
+        "MUL %[x], %[x], %[out_max]\n\t"
+        "SDIV %[x], %[x], %[in_max]\n\t"
+        "ADD %[x], %[x], %[out_min]"
+        : [x] "+r" (x)
+        : [in_min] "r" (in_min), [in_max] "r" (in_max), [out_min] "r" (out_min), [out_max] "r" (out_max)
+    );
+    return x;
 }
+
 int get_sound_level() {
 	return sound_level;
 }
@@ -270,14 +282,26 @@ uint8_t check_uart_fsm(uint8_t reset, uint8_t read_data) {
 }
 
 unsigned char getCheckSum(char *packet) {
-	unsigned char i, checksum=0;
-	for( i = 1; i < 8; i++) {
-		checksum += packet[i];
-	}
-	checksum = 0xff - checksum;
-	checksum += 1;
-	return checksum;
+    unsigned char checksum = 0;
+	long i;
+	long temp;
+    __asm volatile (
+        "MOV %[i], #1\n\t"
+        "MOV %[checksum], #0\n\t"
+        "loop:\n\t"
+        "LDRB %[temp], [%[packet], %[i]]\n\t"
+        "ADD %[checksum], %[checksum], %[temp]\n\t"
+        "ADD %[i], %[i], #1\n\t"
+        "CMP %[i], #8\n\t"
+        "BNE loop\n\t"
+        "MVN %[checksum], %[checksum]\n\t"
+        "ADD %[checksum], %[checksum], #1\n\t"
+        : [checksum] "+r" (checksum), [i] "+r" (i), [temp] "+r" (temp)
+        : [packet] "r" (packet)
+    );
+    return checksum;
 }
+
 
 /**
  * Read data via UART IRQ.
