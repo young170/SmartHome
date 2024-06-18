@@ -1,8 +1,26 @@
 #include "ht16k33_led.h"
 #include "buttons.h"
+#include <stdlib.h>
+#include <string.h>
+
+#define STACK_SIZE 1024
+#define PRIORITY 5
 
 const struct device *ht16k33_led;
 int **led_matrix;
+
+// Declare thread stacks
+K_THREAD_STACK_DEFINE(tens_stack, STACK_SIZE);
+K_THREAD_STACK_DEFINE(units_stack, STACK_SIZE);
+
+// Declare thread data structures
+struct k_thread tens_thread;
+struct k_thread units_thread;
+
+struct display_params {
+    int value;
+    int start_idx;
+};
 
 int init_led_ht16k33(void) {
     // Get a device reference from a devicetree node identifier.
@@ -16,52 +34,55 @@ int init_led_ht16k33(void) {
     return 0;
 }
 
+void display_digit_thread(void *param, void *unused1, void *unused2) {
+    struct display_params *params = (struct display_params *)param;
+    int value = params->value;
+    int start_idx = params->start_idx;
+    int num_arr_idx = 0;
+
+    for (int i = 0; i < MAX_LED_MATRIX_NUM; i += 16) {
+        for (int j = (i + start_idx); j < ((i + start_idx) + 8); j++) {
+            if (led_matrix[value][num_arr_idx] == 1) {
+                if (led_on(ht16k33_led, j) != 0) {
+                    return -1;
+                }
+            } else {
+                if (led_off(ht16k33_led, j) != 0) {
+                    return -1;
+                }
+            }
+            num_arr_idx++;
+        }
+    }
+}
+
 int display_value_ht16k33(int value) {
     if (value < 0 || value > 999) {
         printk("Error: Invalid value\n");
         return -1;
     }
     if (value > 99) {
-        value = value /10;
+        value = value / 10;
     }
 
     int tens = value / 10;
     int units = value % 10;
-    int num_arr_idx = 0;
 
-    // Display tens digit
-    for (int i = 0; i < MAX_LED_MATRIX_NUM; i += 16) {
-        for (int j = i; j < (i + 8); j++) {
-            if (led_matrix[tens][num_arr_idx] == 1) {
-                if (led_on(ht16k33_led, j) != 0) {
-                    return -1;
-                }
-            } else {
-                if (led_off(ht16k33_led, j) != 0) {
-                    return -1;
-                }
-            }
-            num_arr_idx++;
-        }
-    }
+    struct display_params tens_params = { .value = tens, .start_idx = 0 };
+    struct display_params units_params = { .value = units, .start_idx = 8 };
 
-    num_arr_idx = 0;
+    // Create threads for tens and units digits
+    k_thread_create(&tens_thread, tens_stack, STACK_SIZE,
+                    display_digit_thread, &tens_params, NULL, NULL,
+                    PRIORITY, 0, K_NO_WAIT);
 
-    // Display units digit
-    for (int i = 0; i < MAX_LED_MATRIX_NUM; i += 16) {
-        for (int j = (i + 8); j < (i + 16); j++) {
-            if (led_matrix[units][num_arr_idx] == 1) {
-                if (led_on(ht16k33_led, j) != 0) {
-                    return -1;
-                }
-            } else {
-                if (led_off(ht16k33_led, j) != 0) {
-                    return -1;
-                }
-            }
-            num_arr_idx++;
-        }
-    }
+    k_thread_create(&units_thread, units_stack, STACK_SIZE,
+                    display_digit_thread, &units_params, NULL, NULL,
+                    PRIORITY, 0, K_NO_WAIT);
+
+    // Wait for threads to complete
+    k_thread_join(&tens_thread, K_FOREVER);
+    k_thread_join(&units_thread, K_FOREVER);
 
     return 0;
 }
