@@ -282,14 +282,26 @@ uint8_t check_uart_fsm(uint8_t reset, uint8_t read_data) {
 }
 
 unsigned char getCheckSum(char *packet) {
-	unsigned char i, checksum=0;
-	for( i = 1; i < 8; i++) {
-		checksum += packet[i];
-	}
-	checksum = 0xff - checksum;
-	checksum += 1;
-	return checksum;
+    unsigned char checksum = 0;
+	long i;
+	long temp;
+    __asm volatile (
+        "MOV %[i], #1\n\t"
+        "MOV %[checksum], #0\n\t"
+        "loop:\n\t"
+        "LDRB %[temp], [%[packet], %[i]]\n\t"
+        "ADD %[checksum], %[checksum], %[temp]\n\t"
+        "ADD %[i], %[i], #1\n\t"
+        "CMP %[i], #8\n\t"
+        "BNE loop\n\t"
+        "MVN %[checksum], %[checksum]\n\t"
+        "ADD %[checksum], %[checksum], #1\n\t"
+        : [checksum] "+r" (checksum), [i] "+r" (i), [temp] "+r" (temp)
+        : [packet] "r" (packet)
+    );
+    return checksum;
 }
+
 
 /**
  * Read data via UART IRQ.
