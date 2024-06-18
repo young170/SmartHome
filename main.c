@@ -37,7 +37,15 @@
 #include "ht16k33_led.h"
 #include "my_service.h"
 
+#define LED0_NODE DT_ALIAS(led0)
+#define LED1_NODE DT_ALIAS(led1)
+#define LED2_NODE DT_ALIAS(led2)
+#define LED3_NODE DT_ALIAS(led3)
 
+static const struct gpio_dt_spec gpio_led0 = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
+static const struct gpio_dt_spec gpio_led1 = GPIO_DT_SPEC_GET(LED1_NODE, gpios);
+static const struct gpio_dt_spec gpio_led2 = GPIO_DT_SPEC_GET(LED2_NODE, gpios);
+static const struct gpio_dt_spec gpio_led3 = GPIO_DT_SPEC_GET(LED3_NODE, gpios);
 
 #define RECEIVE_TIMEOUT 1000
 
@@ -141,11 +149,14 @@ static void connected(struct bt_conn *conn, uint8_t err)
 		Connection supervisory timeout: %u	\n"
 		, addr, info.role, info.le.interval, info.le.latency, info.le.timeout);
 	}
+
+	gpio_pin_set_dt(&gpio_led2, 1); // BLUETOOTH status LED, LED3
 }
 
 static void disconnected(struct bt_conn *conn, uint8_t reason)
 {
 	printk("Disconnected (reason %u)\n", reason);
+	gpio_pin_set_dt(&gpio_led2, 0); // BLUETOOTH status LED, LED3
 }
 
 static bool le_param_req(struct bt_conn *conn, struct bt_le_conn_param *param)
@@ -346,12 +357,18 @@ int main(void)
 {
 	int err = 0;
 
+	///////////////// LED Init /////////////////
+	struct gpio_dt_spec gpio_led_list[4] = {gpio_led0, gpio_led1, gpio_led2, gpio_led3};
+	int led_list_len = (sizeof(gpio_led_list)) / (sizeof(gpio_led_list[0]));
+
 	// set BTNs as output
-	err = configure_gpio_directions(gpio_sw_list, ARRAY_SIZE(gpio_sw_list));
+	err = configure_gpio_directions(gpio_sw_list, ARRAY_SIZE(gpio_sw_list), gpio_led_list, led_list_len);
     if (err) {
         printk("Error: config GPIO\n");
         return 0;
     }
+
+	gpio_pin_set_dt(&gpio_led3, 1); // start, LED1
 
 	// set BTN INT
     err = configure_gpio_interrupts(gpio_sw_list, ARRAY_SIZE(gpio_sw_list));
@@ -445,7 +462,8 @@ int main(void)
 		}
 	}
 	while(1) {
-		
+		gpio_pin_toggle_dt(&gpio_led1); // status blink
+
 		printk("ADC reading[%u]:\n", count++);
 
 		(void)adc_sequence_init_dt(&adc_channels[0], &sequence);
@@ -464,13 +482,6 @@ int main(void)
 		}
 		sound_level = map(sound_value, 0, MAX_SENSORVALUE, 0, MIN_SENSORVALUE);
 		printk("sound_value: %" PRIu32 " sound_level : %d\n", sound_value, sound_level);
-
-
-		// if(sound_level > 7){
-		// 	led_off_all();
-		// } else {
-		// 	led_on_idx(sound_level);
-		// }
 
 		k_sleep(K_MSEC(5000));
 		serial_write();

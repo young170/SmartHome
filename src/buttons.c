@@ -42,11 +42,11 @@ void button3_work_handler(struct k_work *work) {
     }
 
     enum co2_lv curr_co2_lv;
-    if (co2_ppm > 800) {
+    if (co2_ppm > 900) {
         curr_co2_lv = BAD;
-    } else if (co2_ppm > 450) {
+    } else if (co2_ppm > 500) {
         curr_co2_lv = NORMAL;
-    } else { // great
+    } else {
         curr_co2_lv = GOOD;
     }
 
@@ -114,7 +114,21 @@ void button4_isr(const struct device *dev, struct gpio_callback *cb, uint32_t pi
 }
 
 // check ready and configure as input
-int configure_gpio_directions(struct gpio_dt_spec *sw_list, int sw_list_len) {
+int configure_gpio_directions(struct gpio_dt_spec *sw_list, int sw_list_len, struct gpio_dt_spec *led_list, int led_list_len) {
+    for (int i = 0; i < led_list_len; i++) {
+        if (!gpio_is_ready_dt(&led_list[i])) {
+            printk("Error: led not rdy\n");
+            return 1;
+        }
+
+        if ((gpio_pin_configure_dt(&led_list[i], GPIO_OUTPUT_ACTIVE)) != 0) {
+            printk("Error: led OUTPUT config\n");
+            return 1;
+        }
+
+        gpio_pin_set_dt(&led_list[i], 0);
+    }
+
     for (int i = 0; i < sw_list_len; i++) {
         if (!gpio_is_ready_dt(&sw_list[i])) {
             printk("Error: sw not rdy\n");

@@ -12,7 +12,7 @@ enum co2_lv {
 
 // Function declarations for button and GPIO setup
 int configure_gpio_interrupts(struct gpio_dt_spec *sw_list, int sw_list_len);
-int configure_gpio_directions(struct gpio_dt_spec *sw_list, int sw_list_len);
+int configure_gpio_directions(struct gpio_dt_spec *sw_list, int sw_list_len, struct gpio_dt_spec *led_list, int led_list_len);
 
 // GPIO callback data
 static struct gpio_callback button1_cb_data;
