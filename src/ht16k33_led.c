@@ -34,6 +34,13 @@ int init_led_ht16k33(void) {
     return 0;
 }
 
+void off_led_ht16k33(void) {
+    int num_arr_idx = 0;
+    for (int i = 0; i < MAX_LED_MATRIX_NUM; i++) {
+        led_off(ht16k33_led, i);
+    }
+}
+
 void display_digit_thread(void *param, void *unused1, void *unused2) {
     struct display_params *params = (struct display_params *)param;
     int value = params->value;

@@ -15,6 +15,7 @@
 #include <zephyr/bluetooth/gatt.h>
 
 #include "my_service.h"
+#include "ht16k33_led.h"
 
 #define BT_UUID_MY_SERVICE      BT_UUID_DECLARE_128(MY_SERVICE_UUID)
 #define BT_UUID_MY_SERVICE_RX   BT_UUID_DECLARE_128(RX_CHARACTERISTIC_UUID)
@@ -46,6 +47,11 @@ static ssize_t on_receive(struct bt_conn *conn,
         printk("%02X", buffer[i]);
     }
     printk("\n");
+
+    if (buffer[0] == 0) {
+        // enter low-energy mode
+        off_led_ht16k33();
+    }
     
 	return len;
 }
