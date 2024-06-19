@@ -94,6 +94,13 @@ void sensor_update_timer_expiry_cb(struct k_timer *timer_id) {
     }
 }
 K_TIMER_DEFINE(sensor_update_timer, sensor_update_timer_expiry_cb, NULL);
+// stop sensor timer
+void off_sensor_timer(void) {
+    k_timer_stop(&sensor_update_timer);
+}
+void restart_sensor_timer(void) {
+    k_timer_start(&sensor_update_timer, K_SECONDS(10), K_SECONDS(10));
+}
 
 ///////////////// BTN INT Service Routine /////////////////
 void button1_isr(const struct device *dev, struct gpio_callback *cb, uint32_t pins) {

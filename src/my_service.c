@@ -51,6 +51,9 @@ static ssize_t on_receive(struct bt_conn *conn,
     if (buffer[0] == 0) {
         // enter low-energy mode
         off_led_ht16k33();
+        off_sensor_timer();
+    } else {
+        restart_sensor_timer();
     }
     
 	return len;
