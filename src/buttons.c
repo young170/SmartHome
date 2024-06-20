@@ -29,15 +29,7 @@ K_WORK_DEFINE(button3_work, button3_work_handler);
 
 struct k_work button4_work;
 void button4_work_handler(struct k_work *work) {
-	int sound_level = get_sound_level();
-    if (sound_level < 0) {
-        return;
-    }
-    if (display_number_matrix(sound_level) != 0) {
-        printk("Display error\n");
-    }
-
-    my_service_send(my_connection, &sound_level, (uint16_t)sizeof(sound_level));
+    curr_state = SOUND;
 }
 K_WORK_DEFINE(button4_work, button4_work_handler);
 

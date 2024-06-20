@@ -430,6 +430,14 @@ void co2_state(void) {
 }
 
 void sound_state(void) {
+    if (sound_level < 0) {
+        return;
+    }
+    if (display_number_matrix(sound_level) != 0) {
+        printk("Display error\n");
+    }
+
+    my_service_send(my_connection, &sound_level, (uint16_t)sizeof(sound_level));
 	return;
 }
 
@@ -559,24 +567,24 @@ int main(void)
 				break;
 		}
 
-		// printk("ADC reading[%u]:\n", count++);
+		printk("ADC reading[%u]:\n", count++);
 
-		// (void)adc_sequence_init_dt(&adc_channels[0], &sequence);
-		// err = adc_read(adc_channels[0].dev, &sequence);
-		// if (err < 0) {
-		// 	printk("Could not read (%d)\n", err);
-		// 	k_sleep(K_MSEC(100));
-		// 	continue;
-		// }
+		(void)adc_sequence_init_dt(&adc_channels[0], &sequence);
+		err = adc_read(adc_channels[0].dev, &sequence);
+		if (err < 0) {
+			printk("Could not read (%d)\n", err);
+			k_sleep(K_MSEC(100));
+			continue;
+		}
 
-		// sound_value = (int32_t)buf;
-		// 		if(sound_value >= SENSOR_INVALID_VALUE){
-		// 	printk("sound_value: invalid data %" PRIu32 "\n", sound_value);
-		// 	k_sleep(K_MSEC(100));
-		// 	continue;
-		// }
-		// sound_level = map(sound_value, 0, MAX_SENSORVALUE, 0, MIN_SENSORVALUE);
-		// printk("sound_value: %" PRIu32 " sound_level : %d\n", sound_value, sound_level);
+		sound_value = (int32_t)buf;
+				if(sound_value >= SENSOR_INVALID_VALUE){
+			printk("sound_value: invalid data %" PRIu32 "\n", sound_value);
+			k_sleep(K_MSEC(100));
+			continue;
+		}
+		sound_level = map(sound_value, 0, MAX_SENSORVALUE, 0, MIN_SENSORVALUE);
+		printk("sound_value: %" PRIu32 " sound_level : %d\n", sound_value, sound_level);
 
 		k_sleep(K_MSEC(100));
 	}
