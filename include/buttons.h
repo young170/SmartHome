@@ -8,7 +8,13 @@ enum co2_lv {
   BAD,
   NORMAL,
   GOOD
-}; 
+};
+
+#define HUMIDITY 0
+#define TEMPERATURE 1
+#define CO2 2
+#define SOUND 3
+extern int curr_state;
 
 // Function declarations for button and GPIO setup
 int configure_gpio_interrupts(struct gpio_dt_spec *sw_list, int sw_list_len);

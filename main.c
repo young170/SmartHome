@@ -32,6 +32,7 @@
 #include <zephyr/devicetree.h>
 #include <zephyr/drivers/adc.h>
 
+// #include "main.h"
 #include "buttons.h"
 #include "dht22_sensor.h"
 #include "ht16k33_led.h"
@@ -377,6 +378,61 @@ int get_co2_ppm() {
 	return co2_ppm;
 }
 
+
+void humidity_state(void) {
+	gpio_pin_set_dt(&gpio_led1, 0);
+	int humidity = get_humidity();
+    if (humidity < 0) {
+        return;
+    }
+    if (display_number_matrix(humidity) != 0) {
+        printk("Display error\n");
+    }
+
+    my_service_send(my_connection, &humidity, (uint16_t)sizeof(humidity));
+}
+
+void temperature_state(void) {
+	gpio_pin_set_dt(&gpio_led1, 0);
+	int temperature = get_temperature();
+    if (temperature < 0) {
+        return;
+    }
+    if (display_number_matrix(temperature) != 0) {
+        printk("Display error\n");
+    }
+
+    my_service_send(my_connection, &temperature, (uint16_t)sizeof(temperature));
+}
+
+void co2_state(void) {
+	gpio_pin_toggle_dt(&gpio_led1); // CO2 status blink
+	serial_write();
+	int co2_ppm = get_co2_ppm();
+    if (co2_ppm <= 0) {
+        return;
+    }
+
+    enum co2_lv curr_co2_lv;
+    if (co2_ppm > 900) {
+        curr_co2_lv = BAD;
+    } else if (co2_ppm > 500) {
+        curr_co2_lv = NORMAL;
+    } else {
+        curr_co2_lv = GOOD;
+    }
+
+    if (display_face_state_matrix(curr_co2_lv) != 0) {
+        printk("Display error\n");
+    }
+    
+    my_service_send(my_connection, &co2_ppm, (uint16_t)sizeof(co2_ppm));
+}
+
+void sound_state(void) {
+	return;
+}
+
 int main(void)
 {
 	int err = 0;
@@ -392,7 +448,7 @@ int main(void)
         return 0;
     }
 
-	gpio_pin_set_dt(&gpio_led3, 1); // start, LED1
+	gpio_pin_set_dt(&gpio_led3, 1); // start, LED3
 
 	// set BTN INT
     err = configure_gpio_interrupts(gpio_sw_list, ARRAY_SIZE(gpio_sw_list));
@@ -485,29 +541,43 @@ int main(void)
 			return 0;
 		}
 	}
+
 	while(1) {
-		gpio_pin_toggle_dt(&gpio_led1); // status blink
-
-		printk("ADC reading[%u]:\n", count++);
-
-		(void)adc_sequence_init_dt(&adc_channels[0], &sequence);
-		err = adc_read(adc_channels[0].dev, &sequence);
-		if (err < 0) {
-			printk("Could not read (%d)\n", err);
-			k_sleep(K_MSEC(100));
-			continue;
+		switch(curr_state) {
+			case HUMIDITY:
+				humidity_state();
+				break;
+			case TEMPERATURE:
+				temperature_state();
+				break;
+			case CO2:
+				co2_state();
+				break;
+			case SOUND:
+				sound_state();
+			default:
+				break;
 		}
 
-		sound_value = (int32_t)buf;
-				if(sound_value >= SENSOR_INVALID_VALUE){
-			printk("sound_value: invalid data %" PRIu32 "\n", sound_value);
-			k_sleep(K_MSEC(100));
-			continue;
-		}
-		sound_level = map(sound_value, 0, MAX_SENSORVALUE, 0, MIN_SENSORVALUE);
-		printk("sound_value: %" PRIu32 " sound_level : %d\n", sound_value, sound_level);
+		// printk("ADC reading[%u]:\n", count++);
 
-		k_sleep(K_MSEC(5000));
-		serial_write();
+		// (void)adc_sequence_init_dt(&adc_channels[0], &sequence);
+		// err = adc_read(adc_channels[0].dev, &sequence);
+		// if (err < 0) {
+		// 	printk("Could not read (%d)\n", err);
+		// 	k_sleep(K_MSEC(100));
+		// 	continue;
+		// }
+
+		// sound_value = (int32_t)buf;
+		// 		if(sound_value >= SENSOR_INVALID_VALUE){
+		// 	printk("sound_value: invalid data %" PRIu32 "\n", sound_value);
+		// 	k_sleep(K_MSEC(100));
+		// 	continue;
+		// }
+		// sound_level = map(sound_value, 0, MAX_SENSORVALUE, 0, MIN_SENSORVALUE);
+		// printk("sound_value: %" PRIu32 " sound_level : %d\n", sound_value, sound_level);
+
+		k_sleep(K_MSEC(100));
 	}
 }
