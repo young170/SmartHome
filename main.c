@@ -388,8 +388,6 @@ void humidity_state(void) {
     if (display_number_matrix(humidity) != 0) {
         printk("Display error\n");
     }
-
-    my_service_send(my_connection, &humidity, (uint16_t)sizeof(humidity));
 }
 
 void temperature_state(void) {
@@ -401,8 +399,6 @@ void temperature_state(void) {
     if (display_number_matrix(temperature) != 0) {
         printk("Display error\n");
     }
-
-    my_service_send(my_connection, &temperature, (uint16_t)sizeof(temperature));
 }
 
 void co2_state(void) {
@@ -425,20 +421,23 @@ void co2_state(void) {
     if (display_face_state_matrix(curr_co2_lv) != 0) {
         printk("Display error\n");
     }
-    
-    my_service_send(my_connection, &co2_ppm, (uint16_t)sizeof(co2_ppm));
 }
 
 void sound_state(void) {
+	gpio_pin_set_dt(&gpio_led1, 0);
     if (sound_level < 0) {
         return;
     }
     if (display_number_matrix(sound_level) != 0) {
         printk("Display error\n");
     }
+}
 
-    my_service_send(my_connection, &sound_level, (uint16_t)sizeof(sound_level));
-	return;
+void off_state(void) {
+	off_led_ht16k33();
+	gpio_pin_set_dt(&gpio_led0, 0);
+	gpio_pin_set_dt(&gpio_led1, 0);
+	off_sensor_timer();
 }
 
 int main(void)
@@ -501,7 +500,7 @@ int main(void)
 	my_service_init();
 
 	///////////////// Start Sensor Timer /////////////////
-	k_timer_start(&sensor_update_timer, K_SECONDS(10), K_SECONDS(10));
+	k_timer_start(&sensor_update_timer, K_SECONDS(5), K_SECONDS(5));
 
 	// co2
 	if (!device_is_ready(uart_serial)) {
@@ -563,6 +562,10 @@ int main(void)
 				break;
 			case SOUND:
 				sound_state();
+				break;
+			case OFF:
+				off_state();
+				break;
 			default:
 				break;
 		}

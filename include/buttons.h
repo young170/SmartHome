@@ -14,6 +14,7 @@ enum co2_lv {
 #define TEMPERATURE 1
 #define CO2 2
 #define SOUND 3
+#define OFF 4
 extern int curr_state;
 
 // Function declarations for button and GPIO setup

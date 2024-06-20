@@ -37,11 +37,11 @@ K_WORK_DEFINE(button4_work, button4_work_handler);
 struct k_work sensor_work_que;
 void sensor_work_handler_cb(struct k_work *sensor_worker) {
 	// publish measured sensor values
-    int temperature = get_temperature();
-    if (temperature < 0) {
+    int humidity = get_humidity();
+    if (humidity < 0) {
         return;
     }
-    my_service_send(my_connection, &temperature, (uint16_t)sizeof(temperature));
+    my_service_send(my_connection, &humidity, (uint16_t)sizeof(humidity));
 }
 K_WORK_DEFINE(sensor_work_que, sensor_work_handler_cb);
 
@@ -59,7 +59,7 @@ void off_sensor_timer(void) {
     k_timer_stop(&sensor_update_timer);
 }
 void restart_sensor_timer(void) {
-    k_timer_start(&sensor_update_timer, K_SECONDS(10), K_SECONDS(10));
+    k_timer_start(&sensor_update_timer, K_SECONDS(5), K_SECONDS(5));
 }
 
 ///////////////// BTN INT Service Routine /////////////////
